@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Graphics;
 using System.IO;
 using System;
+using System.Collections.Generic;
 
 namespace TrabalhoFinal;
 
@@ -16,10 +17,11 @@ public class Engine : Game
     //
     private Texture2D[,] textureCubes = new Texture2D[2, 5];
     private Texture2D textureSeta;
+    private Dictionary<string, Texture2D> textureObjects = new Dictionary<string, Texture2D>();
     private int cube = 0, face = 0;
     // areas 
     Rectangle areaSetaDireita, areaSetaEsquerda, areaSetaCima, areaSetaBaixo;
-    Area[] areas = new Area[2];
+    List<Area> areas = new List<Area>();
     // faces
     int lastFace;
     // debug
@@ -40,6 +42,7 @@ public class Engine : Game
 
         //sprites
         string[,] locals = {
+            // Cubo 0
             {
                 "data/labterm/saida.jpg",
                 "data/labterm/me.jpg",
@@ -47,6 +50,7 @@ public class Engine : Game
                 "data/labterm/pcsNormais.jpg",
                 "data/labterm/tetoJunino.jpg"
             },
+            //Cubo 1
             {
                 "data/labterm/geladeira.jpg",
                 "data/labterm/cameras.jpg",
@@ -55,15 +59,54 @@ public class Engine : Game
                 "data/labterm/tetoNormal.jpg"
             }
         };
-        for (int i = 0; i < 2; i++)
+
+        // Objetos nomeados -> paths. Serão carregados em textureObjects["nome"]
+        var objectPaths = new Dictionary<string, string>
         {
-            for (int j = 0; j < 5; j++)
+            ["lock"] = "data/objects/lock.png",
+        };
+        for (int i = 0; i < locals.GetLength(0); i++)
+        {
+            for (int j = 0; j < locals.GetLength(1); j++)
             {
-                // using var str = new FileStream(locals[i, j], FileMode.Open);
-                // textureCubes[0] = new Texture2D[6];
-                textureCubes[i, j] = ReloadTexture(locals[i, j]);
+                try{
+                    if (File.Exists(locals[i, j]))
+                    {
+                        textureCubes[i, j] = ReloadTexture(locals[i, j]); //[cubo, face]
+                    }
+                    else
+                    {
+                        Console.WriteLine($"[cubos] Arquivo não encontrado: {locals[i, j]} (cubo: {i}, face: {j})");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"[cubos] Falha ao carregar cubo {i}, face {j} de '{locals[i, j]}': {ex.Message}");
+                }
             }
         }
+        // Carrega objetos (se existirem no disco) em textureObjects
+        foreach (var kv in objectPaths)
+        {
+            var key = kv.Key;
+            var path = kv.Value;
+            try
+            {
+                if (File.Exists(path))
+                {
+                    textureObjects[key] = ReloadTexture(path);
+                }
+                else
+                {
+                    Console.WriteLine($"[objetos] Arquivo não encontrado: {path} (chave: {key})");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[objetos] Falha ao carregar '{key}' de '{path}': {ex.Message}");
+            }
+        }
+
         Console.WriteLine(Directory.GetCurrentDirectory());
 
         textureSeta = Texture2D.FromStream(GraphicsDevice, new FileStream("data/seta.png", FileMode.Open));
@@ -291,8 +334,9 @@ public class Engine : Game
     private void setAreas()
     {
 
-        areas[0] = new Area("cubo1", new Rectangle(11, -125, 145, 340), 0, 2);
-        areas[1] = new Area("cubo0", new Rectangle(-167, -109, 150, 325), 1, 0);
+        areas.Add(new Area("cubo1", new Rectangle(11, -125, 145, 340), 0, 2));
+        areas.Add(new Area("cubo0", new Rectangle(-167, -109, 150, 325), 1, 0));
+        areas.Add(new Area("lock", new Rectangle(-60, -65, 50, 80), 0, 0));
     }
     private void processAreas(Point mousePos)
     {
@@ -319,8 +363,10 @@ public class Engine : Game
                             cube = 1;
                             face = 2;
                             break;
+                        case "lock":
+                            //
                         default:
-                            Console.WriteLine("id deconhecido: "+area.id);
+                            Console.WriteLine("id desconhecido: "+area.id);
                             break;
                     }
                 }
