@@ -20,11 +20,13 @@ public class Engine : Game
     // areas 
     Rectangle areaSetaDireita, areaSetaEsquerda, areaSetaCima, areaSetaBaixo;
     Area[] areas = new Area[2];
+    float shadowTransition = 0f;
+    bool inShadowTransitionUp = true;
     // faces
     int lastFace;
     // debug
     bool showAreas = false;
-    
+
     public Engine()
     {
         _graphics = new GraphicsDeviceManager(this);
@@ -68,7 +70,7 @@ public class Engine : Game
 
         textureSeta = Texture2D.FromStream(GraphicsDevice, new FileStream("data/seta.png", FileMode.Open));
     }
-   private Texture2D ReloadTexture(string path)
+    private Texture2D ReloadTexture(string path)
     {
         using var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
         return Texture2D.FromStream(GraphicsDevice, stream);
@@ -100,7 +102,7 @@ public class Engine : Game
         if (EntryDevices.enter)
         {
             Console.WriteLine("Real: " + mousePos.X + ", " + mousePos.Y + "; Relativa ao centro: " + (mousePos.X - width / 2) + ", " + (mousePos.Y - height / 2));
-        }       
+        }
 
 
         // clique
@@ -188,8 +190,7 @@ public class Engine : Game
 
         setas(tamX, tamY, padX, padY, zoom, rotation);
         showareas(showAreas);
-        // flip = SpriteEffects.FlipHorizontally;
-        // rotation = MathHelper.PiOver2;
+        transi(tamX,tamY);
         //
         _spriteBatch.End();
         base.Draw(gameTime);
@@ -314,17 +315,58 @@ public class Engine : Game
                         case "cubo0":
                             cube = 0;
                             face = 0;
+                            shadowTransition = -1f; // ativa transição
+                            // executeAfterTransition("cubeOrFace");
                             break;
                         case "cubo1":
                             cube = 1;
                             face = 2;
+                            shadowTransition = -1f; // ativa transição
                             break;
                         default:
-                            Console.WriteLine("id deconhecido: "+area.id);
+                            Console.WriteLine("id deconhecido: " + area.id);
                             break;
                     }
                 }
             }
         }
+    }
+
+    private void transi(int tamX, int tamY)
+    {
+        Texture2D rect = new Texture2D(GraphicsDevice, 1, 1);
+        rect.SetData(new[] { Color.White });
+        float variation = 1 / 20f;
+
+        // direita
+        if (shadowTransition == -1f)
+        {
+            shadowTransition = variation;
+        }
+        else if (shadowTransition > 0f)
+        {
+            if (shadowTransition < 1f && inShadowTransitionUp)
+            {
+                shadowTransition += variation;
+            }
+
+            if (shadowTransition >= 1f && inShadowTransitionUp)
+            {
+                inShadowTransitionUp = false;
+                shadowTransition -= variation;
+            }
+            else if (shadowTransition > 0f && !inShadowTransitionUp)
+            {
+                shadowTransition -= variation;
+            }
+
+            if (shadowTransition <= 0f && !inShadowTransitionUp)
+            {
+                inShadowTransitionUp = true;
+                shadowTransition = 0f;
+            }
+            Console.WriteLine("transi: " + shadowTransition + " " + inShadowTransitionUp);
+        }
+        _spriteBatch.Draw(rect, new Rectangle((int)(width-tamX)/2,(int)(height-tamY)/2,(int)tamX, (int)tamY), Color.Black * shadowTransition);
     }
 }
