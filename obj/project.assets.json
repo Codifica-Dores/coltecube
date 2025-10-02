@@ -268,19 +268,19 @@
     ]
   },
   "packageFolders": {
-    "/home/a2023952608/.nuget/packages/": {}
+    "C:\\Users\\FORMULA2\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/a2023952608/coltecube/TrabalhoFinal.csproj",
+      "projectUniqueName": "C:\\Users\\FORMULA2\\Desktop\\coltecube\\TrabalhoFinal.csproj",
       "projectName": "TrabalhoFinal",
-      "projectPath": "/home/a2023952608/coltecube/TrabalhoFinal.csproj",
-      "packagesPath": "/home/a2023952608/.nuget/packages/",
-      "outputPath": "/home/a2023952608/coltecube/obj/",
+      "projectPath": "C:\\Users\\FORMULA2\\Desktop\\coltecube\\TrabalhoFinal.csproj",
+      "packagesPath": "C:\\Users\\FORMULA2\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\FORMULA2\\Desktop\\coltecube\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/a2023952608/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\FORMULA2\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -303,7 +303,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -330,7 +331,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/256/sdk/8.0.407/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

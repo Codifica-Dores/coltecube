@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using System.IO;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TrabalhoFinal;
 
@@ -17,7 +18,7 @@ public class Engine : Game
     //
     private Texture2D[,] textureCubes = new Texture2D[2, 5];
     private Texture2D textureSeta;
-    private Dictionary<string, Texture2D> textureObjects = new Dictionary<string, Texture2D>();
+    private Dictionary<string, (Texture2D, bool)> textureObjects = new Dictionary<string, (Texture2D, bool)>();
     private int cube = 0, face = 0;
     // areas 
     Rectangle areaSetaDireita, areaSetaEsquerda, areaSetaCima, areaSetaBaixo;
@@ -26,6 +27,8 @@ public class Engine : Game
     int lastFace;
     // debug
     bool showAreas = false;
+    
+    bool there_is_objects;
     
     public Engine()
     {
@@ -63,13 +66,14 @@ public class Engine : Game
         // Objetos nomeados -> paths. Serão carregados em textureObjects["nome"]
         var objectPaths = new Dictionary<string, string>
         {
-            ["lock"] = "data/objects/lock.png",
+            ["lock_locked"] = "data/objects/lock_locked.png",
         };
         for (int i = 0; i < locals.GetLength(0); i++)
         {
             for (int j = 0; j < locals.GetLength(1); j++)
             {
-                try{
+                try
+                {
                     if (File.Exists(locals[i, j]))
                     {
                         textureCubes[i, j] = ReloadTexture(locals[i, j]); //[cubo, face]
@@ -94,7 +98,7 @@ public class Engine : Game
             {
                 if (File.Exists(path))
                 {
-                    textureObjects[key] = ReloadTexture(path);
+                    textureObjects[key] = (ReloadTexture(path), false);
                 }
                 else
                 {
@@ -135,6 +139,8 @@ public class Engine : Game
 
     protected override void Update(GameTime gameTime)
     {
+        there_is_objects = textureObjects.Values.Any(v => v.Item2);
+
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
         // pega position
@@ -147,7 +153,7 @@ public class Engine : Game
 
 
         // clique
-        if (EntryDevices.mleft)
+        if (EntryDevices.mleft && !there_is_objects)
         {
             // textureCubes[1,4] = ReloadTexture("data/labterm/tetoNormal.jpg");
             if (areaSetaDireita.Contains(mousePos))
@@ -185,6 +191,9 @@ public class Engine : Game
             {
                 processAreas(mousePos);
             }
+        }else if (EntryDevices.mleft && (areaSetaBaixo.Contains(mousePos) || areaSetaCima.Contains(mousePos) || areaSetaDireita.Contains(mousePos) || areaSetaEsquerda.Contains(mousePos)))
+        {
+            objects(true); // sai do objeto
         }
 
         if (EntryDevices.space) showAreas = !showAreas;
@@ -208,6 +217,8 @@ public class Engine : Game
         float rotation = 0f;
         Vector2 position = Vector2.Zero;
 
+        bool there_is_objects = textureObjects.Values.Any(v => v.Item2);
+
         // TODO: Add your drawing code here
         if (face == 4)
         {
@@ -227,15 +238,47 @@ public class Engine : Game
             position = new Vector2(width / 2 - tamX / 2, height / 2 - tamY / 2);
         }
         var flip = SpriteEffects.None;  // flipDrawSprite ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
-        _spriteBatch.Draw(textureCubes[cube, face], position, null, Color.White, rotation, Vector2.Zero, zoom, flip, 0); // 192 x 96
+
+        Color color = Color.White;
+        // if (there_is_object) blur background
+        if (there_is_objects) color = new Color(100, 100, 100, 255); // Gray color for blur effect
+
+        _spriteBatch.Draw(textureCubes[cube, face], position, null, color, rotation, Vector2.Zero, zoom, flip, 0); // 192 x 96
+
+        // Draw objects
+        objects();
 
         setas(tamX, tamY, padX, padY, zoom, rotation);
+
         showareas(showAreas);
         // flip = SpriteEffects.FlipHorizontally;
         // rotation = MathHelper.PiOver2;
         //
         _spriteBatch.End();
         base.Draw(gameTime);
+    }
+
+    private void objects(bool leave = false)
+    {
+        if (leave)
+        {
+            // Sai do objeto
+            foreach (var key in textureObjects.Keys.ToList())
+            {
+                textureObjects[key] = (textureObjects[key].Item1, false);
+            }
+        }
+        else
+        {
+            // Desenha objetos na cena, se houver
+            foreach (var kv in textureObjects)
+            {
+                var key = kv.Key;
+                var (texture, visible) = kv.Value;
+
+                if (visible) _spriteBatch.Draw(texture, new Vector2(100, 100), null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
+            }
+        }
     }
 
     private void setas(int tamX, int tamY, int padX, int padY, float zoom, float initRotation)
@@ -364,7 +407,9 @@ public class Engine : Game
                             face = 2;
                             break;
                         case "lock":
-                            //
+                            Console.WriteLine("Clicou na fechadura trancada!");
+                            textureObjects["lock_locked"] = (textureObjects["lock_locked"].Item1, true);
+                            break;
                         default:
                             Console.WriteLine("id desconhecido: "+area.id);
                             break;
