@@ -22,6 +22,7 @@ public class Engine : Game
     Area[] areas = new Area[2];
     float shadowTransition = 0f;
     bool inShadowTransitionUp = true;
+    
     // faces
     int lastFace;
     // debug
