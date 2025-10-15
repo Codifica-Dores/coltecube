@@ -22,7 +22,7 @@ public class Engine : Game
     Area[] areas = new Area[2];
     float shadowTransition = 0f;
     bool inShadowTransitionUp = true;
-    
+
     // faces
     int lastFace;
     // debug
@@ -42,38 +42,32 @@ public class Engine : Game
         IsMouseVisible = true;
 
         //sprites
+        const string localGeral = "data/coltecube/";
         string[,] locals = {
             {
-                "data/labterm/saida.jpg",
-                "data/labterm/me.jpg",
-                "data/labterm/miniArmario.jpg",
-                "data/labterm/pcsNormais.jpg",
-                "data/labterm/tetoJunino.jpg"
+                "Escada/Escada/Escada(background).png",
+                "d.png",
+                "Cantina/Cantina/CantinaVisaoGeral.png",
+                "BanhoDeSol/BanhoDeSol/BanhoDeSolVisaoGeral.png",
+                "a.png"
             },
-            {
-                "data/labterm/geladeira.jpg",
-                "data/labterm/cameras.jpg",
-                "data/labterm/janPeq.jpg",
-                "data/labterm/superPcs.jpg",
-                "data/labterm/tetoNormal.jpg"
-            }
         };
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < 1; i++)
         {
             for (int j = 0; j < 5; j++)
             {
                 // using var str = new FileStream(locals[i, j], FileMode.Open);
                 // textureCubes[0] = new Texture2D[6];
-                textureCubes[i, j] = ReloadTexture(locals[i, j]);
+                textureCubes[i, j] = ReloadTexture(localGeral,locals[i, j]);
             }
         }
         Console.WriteLine(Directory.GetCurrentDirectory());
 
         textureSeta = Texture2D.FromStream(GraphicsDevice, new FileStream("data/seta.png", FileMode.Open));
     }
-    private Texture2D ReloadTexture(string path)
+    private Texture2D ReloadTexture(string localGeral,string path)
     {
-        using var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+        using var stream = new FileStream(localGeral+path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
         return Texture2D.FromStream(GraphicsDevice, stream);
     }
 
@@ -161,10 +155,11 @@ public class Engine : Game
         _spriteBatch.Begin();
         //
         // 400,295
-        int tamX = 4080 / 5;
-        int tamY = 3060 / 5;
+        int division = 4;
+        int tamX = 2048 / division;
+        int tamY = 1536 / division;
         int padX = 0, padY = 0; // equal and 5
-        float zoom = 0.2f;
+        float zoom = 1f/division;
         float rotation = 0f;
         Vector2 position = Vector2.Zero;
 
