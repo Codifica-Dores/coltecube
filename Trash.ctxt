@@ -1,9 +1,8 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Graphics;
 using System.IO;
 using System;
-
 namespace TrabalhoFinal;
 
 public class Engine : Game
@@ -16,12 +15,13 @@ public class Engine : Game
     //
     private Texture2D[,] textureCubes = new Texture2D[2, 5];
     private Texture2D textureSeta;
-    private int cube = 0, face = 0,preCube = 0, preFace = 0;
+    private int cube = 0, face = 0;
     // areas 
     Rectangle areaSetaDireita, areaSetaEsquerda, areaSetaCima, areaSetaBaixo;
     Area[] areas = new Area[2];
     float shadowTransition = 0f;
     bool inShadowTransitionUp = true;
+
     // faces
     int lastFace;
     // debug
@@ -30,8 +30,8 @@ public class Engine : Game
     public Engine()
     {
         _graphics = new GraphicsDeviceManager(this);
-        width = 1920f;
-        height = 1080f;
+        width = 1000f;
+        height = 800f;
         _graphics.PreferredBackBufferWidth = (int)width;   // tamXura
         _graphics.PreferredBackBufferHeight = (int)height;   // altura
 
@@ -41,40 +41,35 @@ public class Engine : Game
         IsMouseVisible = true;
 
         //sprites
+        const string localGeral = "data/coltecube/";
         string[,] locals = {
             {
-                "data/labterm/saida.jpg",
-                "data/labterm/me.jpg",
-                "data/labterm/miniArmario.jpg",
-                "data/labterm/pcsNormais.jpg",
-                "data/labterm/tetoJunino.jpg"
+                "Escada/Escada/Escada(background).png",
+                "d.png",
+                "Cantina/Cantina/CantinaVisaoGeral.png",
+                "BanhoDeSol/BanhoDeSol/BanhoDeSolVisaoGeral.png",
+                "a.png"
             },
-            {
-                "data/labterm/geladeira.jpg",
-                "data/labterm/cameras.jpg",
-                "data/labterm/janPeq.jpg",
-                "data/labterm/superPcs.jpg",
-                "data/labterm/tetoNormal.jpg"
-            }
         };
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < 1; i++)
         {
             for (int j = 0; j < 5; j++)
             {
                 // using var str = new FileStream(locals[i, j], FileMode.Open);
                 // textureCubes[0] = new Texture2D[6];
-                textureCubes[i, j] = ReloadTexture(locals[i, j]);
+                textureCubes[i, j] = ReloadTexture(localGeral,locals[i, j]);
             }
         }
         Console.WriteLine(Directory.GetCurrentDirectory());
 
         textureSeta = Texture2D.FromStream(GraphicsDevice, new FileStream("data/seta.png", FileMode.Open));
     }
-    private Texture2D ReloadTexture(string path)
+    private Texture2D ReloadTexture(string localGeral,string path)
     {
-        using var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+        using var stream = new FileStream(localGeral+path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
         return Texture2D.FromStream(GraphicsDevice, stream);
     }
+
 
     protected override void Initialize()
     {
@@ -105,8 +100,6 @@ public class Engine : Game
 
 
         // clique
-        bool preProcess_ActivateTransition = false;
-        int preProcess_Face = face, preProcess_Cube = cube;
         if (EntryDevices.mleft)
         {
             // textureCubes[1,4] = ReloadTexture("data/labterm/tetoNormal.jpg");
@@ -115,14 +108,12 @@ public class Engine : Game
                 if (face == 4) face = lastFace;
                 if (face < 3) face++; else face = 0;
                 Console.WriteLine("Clicou em cima da seta direita!");
-                preProcess_ActivateTransition = true;
             }
             else if (areaSetaEsquerda.Contains(mousePos))
             {
                 if (face == 4) face = lastFace;
                 if (face > 0) face--; else face = 3;
                 Console.WriteLine("Clicou em cima da seta esquerda!");
-                preProcess_ActivateTransition = true;
             }
             else if (areaSetaCima.Contains(mousePos))
             {
@@ -137,25 +128,16 @@ public class Engine : Game
                     face = (lastFace + 2) % 4;
                 }
                 Console.WriteLine(lastFace + " cima");
-                preProcess_ActivateTransition = true;
             }
             else if (areaSetaBaixo.Contains(mousePos))
             {
                 face = lastFace;
-                preProcess_ActivateTransition = true;
                 Console.WriteLine("Clicou em cima da seta de baixo!");
             }
             else
             {
                 processAreas(mousePos);
             }
-        }
-        if (preProcess_ActivateTransition)
-        {
-            int a = face, b = cube;
-            face = preProcess_Face; cube = preProcess_Cube;
-            preFace = a; preCube = b;
-            activateTransition();
         }
 
         if (EntryDevices.space) showAreas = !showAreas;
@@ -170,15 +152,13 @@ public class Engine : Game
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
         _spriteBatch.Begin();
-        // Texture2D rect = new Texture2D(GraphicsDevice, 1, 1);
-        // _spriteBatch.Draw(rect, new Rectangle(0, 0, (int)width, (int)height), null,Color.Black,0f,1f,0f,0);
         //
         // 400,295
-        float division = 3.5f;
-        int tamX = (int)(4080 / division);
-        int tamY = (int)(3060 / division);
+        int division = 4;
+        int tamX = 2048 / division;
+        int tamY = 1536 / division;
         int padX = 0, padY = 0; // equal and 5
-        float zoom = 1f / division;
+        float zoom = 1f/division;
         float rotation = 0f;
         Vector2 position = Vector2.Zero;
 
@@ -306,6 +286,7 @@ public class Engine : Game
 
     private void setAreas()
     {
+
         areas[0] = new Area("cubo1", new Rectangle(11, -125, 145, 340), 0, 2);
         areas[1] = new Area("cubo0", new Rectangle(-167, -109, 150, 325), 1, 0);
     }
@@ -327,15 +308,15 @@ public class Engine : Game
                     switch (area.id)
                     {
                         case "cubo0":
-                            preCube = 0;
-                            preFace = 0;
-                            activateTransition(); // ativa transição
+                            cube = 0;
+                            face = 0;
+                            shadowTransition = -1f; // ativa transição
                             // executeAfterTransition("cubeOrFace");
                             break;
                         case "cubo1":
-                            preCube = 1;
-                            preFace = 2;
-                            activateTransition(); // ativa transição
+                            cube = 1;
+                            face = 2;
+                            shadowTransition = -1f; // ativa transição
                             break;
                         default:
                             Console.WriteLine("id deconhecido: " + area.id);
@@ -344,11 +325,6 @@ public class Engine : Game
                 }
             }
         }
-    }
-
-    private void activateTransition()
-    {
-        shadowTransition = -1f;
     }
 
     private void transi(int tamX, int tamY)
@@ -372,8 +348,6 @@ public class Engine : Game
             if (shadowTransition >= 1f && inShadowTransitionUp)
             {
                 inShadowTransitionUp = false;
-                face = preFace;
-                cube = preCube;
                 shadowTransition -= variation;
             }
             else if (shadowTransition > 0f && !inShadowTransitionUp)
@@ -388,7 +362,6 @@ public class Engine : Game
             }
             Console.WriteLine("transi: " + shadowTransition + " " + inShadowTransitionUp);
         }
-        _spriteBatch.Draw(rect, new Rectangle((int)(width - tamX) / 2, (int)(height - tamY) / 2, (int)tamX, (int)tamY), Color.Black * shadowTransition);
-        
+        _spriteBatch.Draw(rect, new Rectangle((int)(width-tamX)/2,(int)(height-tamY)/2,(int)tamX, (int)tamY), Color.Black * shadowTransition);
     }
 }
