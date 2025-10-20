@@ -126,3 +126,4 @@ C:\Users\FORMULA2\Desktop\coltecube\bin\Debug\net8.0\runtimes\win-x64\native\SDL
 C:\Users\FORMULA2\Desktop\coltecube\obj\Debug\net8.0\Trabalho.1FBAD070.Up2Date
 C:\Users\FORMULA2\Desktop\coltecube\obj\Debug\net8.0\TrabalhoFinal.genruntimeconfig.cache
 C:\Users\FORMULA2\Desktop\coltecube\obj\Debug\net8.0\ref\TrabalhoFinal.dll
+C:\Users\FORMULA2\Desktop\coltecube\bin\Debug\net8.0\Content\FonteArial.xnb

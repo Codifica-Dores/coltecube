@@ -5,30 +5,37 @@ using System.IO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using TrabalhoFinal.Interactions;
+using TrabalhoFinal.Scene;
+
+#nullable enable
 
 namespace TrabalhoFinal;
 
 public class Engine : Game
 {
     private GraphicsDeviceManager _graphics;
-    private SpriteBatch _spriteBatch;
+    private SpriteBatch _spriteBatch = null!;
     private float width { get; }
     private float height { get; }
 
     //
-    private Texture2D[,] textureCubes = new Texture2D[2, 5];
-    private Texture2D textureSeta;
-    private Dictionary<string, (Texture2D, bool)> textureObjects = new Dictionary<string, (Texture2D, bool)>();
-    private int cube = 0, face = 0;
-    // areas 
-    Rectangle areaSetaDireita, areaSetaEsquerda, areaSetaCima, areaSetaBaixo;
-    List<Area> areas = new List<Area>();
-    // faces
-    int lastFace;
-    // debug
+    private readonly Dictionary<string, CubeDefinition> _cubes = new(); // (cubo0:CubeDefinition, cubo1:CubeDefinition)
+    private readonly Dictionary<string, Texture2D> _objectTextures = new(); // (objeto0:Imagem, objeto1:Imagem)
+    private readonly Dictionary<string, IInteractiveObject> _interactiveObjects = new();
+    private IInteractiveObject? _activeObject;
+    private Texture2D _arrowTexture;
+    private readonly Rectangle _arrowSourceRect = new Rectangle(5, 5, 17, 20);
+    private string _currentCubeId = string.Empty;
+    private int _currentFaceIndex;
+    private int lastFace;
+    private SpriteFont _uiFont = null!;
+    private Rectangle areaSetaDireita, areaSetaEsquerda, areaSetaCima, areaSetaBaixo;
+    private Rectangle _viewportBounds;
     bool showAreas = false;
-    
-    bool there_is_objects;
+
+    private CubeDefinition CurrentCube => _cubes[_currentCubeId];
+    private CubeFaceDefinition CurrentFace => CurrentCube.GetFace(_currentFaceIndex);
     
     public Engine()
     {
@@ -43,9 +50,20 @@ public class Engine : Game
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
 
-        //sprites
-        string[,] locals = {
-            // Cubo 0
+        _viewportBounds = new Rectangle(0, 0, (int)width, (int)height);
+
+        InitializeCubes();
+        InitializeObjectTextures();
+
+        _arrowTexture = LoadTextureOrFallback("data/seta.png", "arrow");
+
+        Console.WriteLine(Directory.GetCurrentDirectory());
+    }
+    private void InitializeCubes()
+    {
+        var cubeTexturePaths = new Dictionary<string, string[]>
+        {
+            ["cubo0"] = new[]
             {
                 "data/labterm/saida.jpg",
                 "data/labterm/me.jpg",
@@ -53,7 +71,7 @@ public class Engine : Game
                 "data/labterm/pcsNormais.jpg",
                 "data/labterm/tetoJunino.jpg"
             },
-            //Cubo 1
+            ["cubo1"] = new[]
             {
                 "data/labterm/geladeira.jpg",
                 "data/labterm/cameras.jpg",
@@ -63,62 +81,102 @@ public class Engine : Game
             }
         };
 
-        // Objetos nomeados -> paths. Serão carregados em textureObjects["nome"]
+        foreach (var (cubeId, facePaths) in cubeTexturePaths)
+        {
+            var cubeDefinition = new CubeDefinition(cubeId);
+            for (var faceIndex = 0; faceIndex < facePaths.Length; faceIndex++)
+            {
+                var texture = LoadTextureOrFallback(facePaths[faceIndex], $"cubos:{cubeId}:{faceIndex}");
+                cubeDefinition.AddFace(new CubeFaceDefinition(faceIndex, texture));
+            }
+            _cubes[cubeId] = cubeDefinition;
+        }
+
+        ConfigureAreas();
+
+        if (_cubes.Count > 0)
+        {
+            _currentCubeId = _cubes.Keys.First();
+        }
+
+        _currentFaceIndex = 0;
+        lastFace = 0;
+    }
+
+    private void ConfigureAreas()
+    {
+        if (_cubes.TryGetValue("cubo0", out var cube0))
+        {
+            cube0.GetFace(2).AddArea(new SceneArea(
+                "door_to_cubo1",
+                new Rectangle(11, -125, 145, 340),
+                new SceneAreaAction(SceneAreaActionKind.ChangeCube, targetCubeId: "cubo1", targetFaceIndex: 2)));
+
+            cube0.GetFace(0).AddArea(new SceneArea(
+                "lock",
+                new Rectangle(-60, -65, 50, 80),
+                new SceneAreaAction(SceneAreaActionKind.ShowObject, objectId: "lock")));
+        }
+
+        if (_cubes.TryGetValue("cubo1", out var cube1))
+        {
+            cube1.GetFace(0).AddArea(new SceneArea(
+                "door_to_cubo0",
+                new Rectangle(-167, -109, 150, 325),
+                new SceneAreaAction(SceneAreaActionKind.ChangeCube, targetCubeId: "cubo0", targetFaceIndex: 0)));
+        }
+    }
+
+    private void InitializeObjectTextures()
+    {
         var objectPaths = new Dictionary<string, string>
         {
-            ["lock_locked"] = "data/objects/lock_locked.png",
+            ["lock"] = "data/objects/lock_locked.png"
         };
-        for (int i = 0; i < locals.GetLength(0); i++)
-        {
-            for (int j = 0; j < locals.GetLength(1); j++)
-            {
-                try
-                {
-                    if (File.Exists(locals[i, j]))
-                    {
-                        textureCubes[i, j] = ReloadTexture(locals[i, j]); //[cubo, face]
-                    }
-                    else
-                    {
-                        Console.WriteLine($"[cubos] Arquivo não encontrado: {locals[i, j]} (cubo: {i}, face: {j})");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"[cubos] Falha ao carregar cubo {i}, face {j} de '{locals[i, j]}': {ex.Message}");
-                }
-            }
-        }
-        // Carrega objetos (se existirem no disco) em textureObjects
-        foreach (var kv in objectPaths)
-        {
-            var key = kv.Key;
-            var path = kv.Value;
-            try
-            {
-                if (File.Exists(path))
-                {
-                    textureObjects[key] = (ReloadTexture(path), false);
-                }
-                else
-                {
-                    Console.WriteLine($"[objetos] Arquivo não encontrado: {path} (chave: {key})");
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"[objetos] Falha ao carregar '{key}' de '{path}': {ex.Message}");
-            }
-        }
 
-        Console.WriteLine(Directory.GetCurrentDirectory());
-
-        textureSeta = Texture2D.FromStream(GraphicsDevice, new FileStream("data/seta.png", FileMode.Open));
+        foreach (var (id, path) in objectPaths)
+        {
+            _objectTextures[id] = LoadTextureOrFallback(path, $"objetos:{id}", Color.White);
+        }
     }
-   private Texture2D ReloadTexture(string path)
+
+    private Texture2D ReloadTexture(string path)
     {
         using var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
         return Texture2D.FromStream(GraphicsDevice, stream);
+    }
+
+    private Texture2D LoadTextureOrFallback(string path, string label, Color? fallbackColor = null)
+    {
+        try
+        {
+            if (File.Exists(path))
+            {
+                return ReloadTexture(path);
+            }
+
+            Console.WriteLine($"[{label}] Arquivo não encontrado: {path}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[{label}] Falha ao carregar '{path}': {ex.Message}");
+        }
+
+        var color = fallbackColor ?? Color.Magenta;
+        var texture = new Texture2D(GraphicsDevice, 1, 1);
+        texture.SetData(new[] { color });
+        return texture;
+    }
+
+    private void ConfigureInteractiveObjects()
+    {
+        if (_objectTextures.TryGetValue("lock", out var lockTexture))
+        {
+            var lockObject = new LockCombinationObject("lock", lockTexture, _arrowTexture, _arrowSourceRect, _uiFont);
+             // quando CombinationChanged é invocado void func(int [] digits){}
+            lockObject.CombinationChanged += digits => Console.WriteLine($"[lock] combinação: {string.Join(string.Empty, digits)}");
+            _interactiveObjects[lockObject.Id] = lockObject;
+        }
     }
 
 
@@ -132,74 +190,77 @@ public class Engine : Game
     protected override void LoadContent()
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
-        setAreas();
+        try
+        {
+            _uiFont = Content.Load<SpriteFont>("FonteArial");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[content] Falha ao carregar FonteArial: {ex.Message}");
+            throw;
+        }
 
-        // TODO: use this.Content to load your game content here
+        ConfigureInteractiveObjects();
     }
 
     protected override void Update(GameTime gameTime)
     {
-        there_is_objects = textureObjects.Values.Any(v => v.Item2);
+        var gamePadState = GamePad.GetState(PlayerIndex.One);
+        var keyboardState = Keyboard.GetState();
 
-        if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-            Exit();
+        if (gamePadState.Buttons.Back == ButtonState.Pressed || keyboardState.IsKeyDown(Keys.Escape))
+        { // Se está no objeto ativo e aperta para voltar
+            if (_activeObject?.IsActive )
+            {
+                HideActiveObject();
+            }
+            else
+            {
+                Exit();
+                return;
+            }
+        }
+
         // pega position
         EntryDevices.Update();
         Point mousePos = new Point(EntryDevices.x, EntryDevices.y);
         if (EntryDevices.enter)
         {
             Console.WriteLine("Real: " + mousePos.X + ", " + mousePos.Y + "; Relativa ao centro: " + (mousePos.X - width / 2) + ", " + (mousePos.Y - height / 2));
-        }       
+        }
 
+        bool objectActive = _activeObject?.IsActive;
 
-        // clique
-        if (EntryDevices.mleft && !there_is_objects)
+        if (objectActive)
         {
-            // textureCubes[1,4] = ReloadTexture("data/labterm/tetoNormal.jpg");
-            if (areaSetaDireita.Contains(mousePos))
-            {
-                if (face == 4) face = lastFace;
-                if (face < 3) face++; else face = 0;
-                Console.WriteLine("Clicou em cima da seta direita!");
-            }
-            else if (areaSetaEsquerda.Contains(mousePos))
-            {
-                if (face == 4) face = lastFace;
-                if (face > 0) face--; else face = 3;
-                Console.WriteLine("Clicou em cima da seta esquerda!");
-            }
-            else if (areaSetaCima.Contains(mousePos))
-            {
+            _activeObject!.Update(gameTime);
 
-                if (face < 4)
-                {
-                    lastFace = face;
-                    face = 4;
-                }
-                else
-                {
-                    face = (lastFace + 2) % 4;
-                }
-                Console.WriteLine(lastFace + " cima");
-            }
-            else if (areaSetaBaixo.Contains(mousePos))
+            if (EntryDevices.mleft)
             {
-                face = lastFace;
-                Console.WriteLine("Clicou em cima da seta de baixo!");
+                bool consumed = _activeObject.HandleClick(mousePos, MouseButton.Left);
+                bool clickedNavigationArrow =
+                    areaSetaDireita.Contains(mousePos) ||
+                    areaSetaEsquerda.Contains(mousePos) ||
+                    areaSetaCima.Contains(mousePos) ||
+                    areaSetaBaixo.Contains(mousePos);
+
+                if (!consumed && (clickedNavigationArrow || !_activeObject.Bounds.Contains(mousePos)))
+                {
+                    HideActiveObject();
+                }
             }
-            else
+
+            if (EntryDevices.mright)
             {
-                processAreas(mousePos);
+                HideActiveObject();
             }
-        }else if (EntryDevices.mleft && (areaSetaBaixo.Contains(mousePos) || areaSetaCima.Contains(mousePos) || areaSetaDireita.Contains(mousePos) || areaSetaEsquerda.Contains(mousePos)))
+        }
+        else if (EntryDevices.mleft)
         {
-            objects(true); // sai do objeto
+            HandleSceneClick(mousePos);
         }
 
         if (EntryDevices.space) showAreas = !showAreas;
-        // process areas
-        // ac cima >  baixo
-        // ac baixo > cima
 
         base.Update(gameTime);
     }
@@ -210,142 +271,223 @@ public class Engine : Game
         _spriteBatch.Begin();
         //
         // 400,295
-        int tamX = 4080 / 5;
-        int tamY = 3060 / 5;
-        int padX = 0, padY = 0; // equal and 5
+    int tamX = 4080 / 5;
+    int tamY = 3060 / 5;
         float zoom = 0.2f;
         float rotation = 0f;
         Vector2 position = Vector2.Zero;
 
-        bool there_is_objects = textureObjects.Values.Any(v => v.Item2);
+        bool objectActive = _activeObject?.IsActive == true;
 
-        // TODO: Add your drawing code here
-        if (face == 4)
+        if (_currentFaceIndex == 4)
         {
             position = new Vector2(width / 2 - tamX / 2, height / 2 - tamY / 2);
             if (lastFace % 2 == 1)
             {
                 rotation = MathHelper.PiOver2 * ((lastFace - 1));
                 position = new Vector2(width / 2 - tamX / 2 + tamX * (lastFace - lastFace % 2) / 2, height / 2 - tamY / 2 + tamY * (lastFace - lastFace % 2) / 2);
-
-                // position = new Vector2(height / 2 - tamY / 2, width / 2 - tamX / 2);
             }
-            Console.WriteLine("rot.: " + rotation);
-
         }
         else
         {
             position = new Vector2(width / 2 - tamX / 2, height / 2 - tamY / 2);
         }
-        var flip = SpriteEffects.None;  // flipDrawSprite ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
 
-        Color color = Color.White;
-        // if (there_is_object) blur background
-        if (there_is_objects) color = new Color(100, 100, 100, 255); // Gray color for blur effect
+        Color color = objectActive ? new Color(100, 100, 100, 255) : Color.White;
 
-        _spriteBatch.Draw(textureCubes[cube, face], position, null, color, rotation, Vector2.Zero, zoom, flip, 0); // 192 x 96
+        _spriteBatch.Draw(CurrentFace.Texture, position, null, color, rotation, Vector2.Zero, zoom, SpriteEffects.None, 0);
 
-        // Draw objects
-        objects();
+        DrawActiveObject();
 
-        setas(tamX, tamY, padX, padY, zoom, rotation);
+        setas(tamX, tamY, zoom, rotation);
 
         showareas(showAreas);
-        // flip = SpriteEffects.FlipHorizontally;
-        // rotation = MathHelper.PiOver2;
-        //
+
         _spriteBatch.End();
         base.Draw(gameTime);
     }
 
-    private void objects(bool leave = false)
+    private void DrawActiveObject()
     {
-        if (leave)
-        {
-            // Sai do objeto
-            foreach (var key in textureObjects.Keys.ToList())
-            {
-                textureObjects[key] = (textureObjects[key].Item1, false);
-            }
-        }
-        else
-        {
-            // Desenha objetos na cena, se houver
-            foreach (var kv in textureObjects)
-            {
-                var key = kv.Key;
-                var (texture, visible) = kv.Value;
+        _activeObject?.Draw(_spriteBatch);
+    }
 
-                if (visible) _spriteBatch.Draw(texture, new Vector2(100, 100), null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
+    private void HandleSceneClick(Point mousePos)
+    {
+        if (HandleNavigationArrows(mousePos))
+        {
+            return;
+        }
+
+        ProcessSceneAreas(mousePos);
+    }
+
+    private bool HandleNavigationArrows(Point mousePos)
+    {
+        if (areaSetaDireita.Contains(mousePos))
+        {
+            if (_currentFaceIndex == 4) _currentFaceIndex = lastFace;
+            _currentFaceIndex = _currentFaceIndex < 3 ? _currentFaceIndex + 1 : 0;
+            return true;
+        }
+
+        if (areaSetaEsquerda.Contains(mousePos))
+        {
+            if (_currentFaceIndex == 4) _currentFaceIndex = lastFace;
+            _currentFaceIndex = _currentFaceIndex > 0 ? _currentFaceIndex - 1 : 3;
+            return true;
+        }
+
+        if (areaSetaCima.Contains(mousePos))
+        {
+            if (_currentFaceIndex < 4)
+            {
+                lastFace = _currentFaceIndex;
+                _currentFaceIndex = 4;
             }
+            else
+            {
+                _currentFaceIndex = (lastFace + 2) % 4;
+            }
+            return true;
+        }
+
+        if (areaSetaBaixo.Contains(mousePos))
+        {
+            _currentFaceIndex = lastFace;
+            return true;
+        }
+
+        return false;
+    }
+
+    private void ProcessSceneAreas(Point mousePos)
+    {
+        foreach (var area in CurrentFace.Areas)
+        {
+            var screenRect = TranslateAreaToScreen(area.Bounds);
+            if (!screenRect.Contains(mousePos))
+            {
+                continue;
+            }
+
+            ExecuteAreaAction(area);
+            break;
         }
     }
 
-    private void setas(int tamX, int tamY, int padX, int padY, float zoom, float initRotation)
+    private void ExecuteAreaAction(SceneArea area)
     {
-        // direita
-        padX = 5;
-        padY = 5;
-        int tamY2 = 20;
-        int tamX2 = 17;
+        switch (area.Action.Kind)
+        {
+            case SceneAreaActionKind.ChangeCube:
+                if (area.Action.TargetCubeId is { } targetCube && _cubes.ContainsKey(targetCube))
+                {
+                    _currentCubeId = targetCube;
+                    _currentFaceIndex = area.Action.TargetFaceIndex ?? 0;
+                    if (_currentFaceIndex != 4)
+                    {
+                        lastFace = _currentFaceIndex;
+                    }
+                }
+                break;
+            case SceneAreaActionKind.ShowObject:
+                if (area.Action.ObjectId is { } objectId)
+                {
+                    ShowObject(objectId);
+                }
+                break;
+        }
+    }
+
+    private void ShowObject(string objectId)
+    {
+        if (_interactiveObjects.TryGetValue(objectId, out var interactive))
+        {
+            interactive.Show(_viewportBounds);
+            _activeObject = interactive;
+        }
+        else
+        {
+            Console.WriteLine($"[objetos] Objeto '{objectId}' não encontrado.");
+        }
+    }
+
+    private void HideActiveObject()
+    {
+        if (_activeObject == null)
+        {
+            return;
+        }
+
+        _activeObject.Hide();
+        _activeObject = null;
+    }
+
+    private Rectangle TranslateAreaToScreen(Rectangle area)
+    {
+        return new Rectangle(
+            (int)(width / 2 + area.X),
+            (int)(height / 2 + area.Y),
+            area.Width,
+            area.Height
+        );
+    }
+
+    private void setas(int tamX, int tamY, float zoom, float _)
+    {
         int marginX = 5;
-        var rotation = 0f;
+        float rotation = 0f;
         var flip = SpriteEffects.None;
         zoom = 1f;
 
-        var position = new Vector2(width / 2 + tamX / 2 - tamX2 - marginX, height / 2 - tamY2 / 2);
-        var cut = new Rectangle(padX, padY, tamX2, tamY2);
+        var cut = _arrowSourceRect;
+
+        var position = new Vector2(width / 2 + tamX / 2 - cut.Width - marginX, height / 2 - cut.Height / 2f);
         areaSetaDireita = new Rectangle(
             (int)position.X,
             (int)position.Y,
             cut.Width,
             cut.Height
         );
-        _spriteBatch.Draw(textureSeta, position, cut, Color.White, rotation, Vector2.Zero, zoom, flip, 0);
+        _spriteBatch.Draw(_arrowTexture, position, cut, Color.White, rotation, Vector2.Zero, zoom, flip, 0);
 
-        // esquerda
         flip = SpriteEffects.FlipHorizontally;
-        position = new Vector2(width / 2 - tamX / 2 + marginX, height / 2 - tamY2 / 2);
-        cut = new Rectangle(padX, padY, tamX2, tamY2);
+        position = new Vector2(width / 2 - tamX / 2 + marginX, height / 2 - cut.Height / 2f);
         areaSetaEsquerda = new Rectangle(
             (int)position.X,
             (int)position.Y,
             cut.Width,
             cut.Height
         );
-        _spriteBatch.Draw(textureSeta, position, cut, Color.White, rotation, Vector2.Zero, zoom, flip, 0);
+        _spriteBatch.Draw(_arrowTexture, position, cut, Color.White, rotation, Vector2.Zero, zoom, flip, 0);
 
-        // cima
         flip = SpriteEffects.None;
         rotation = -MathHelper.PiOver2;
-        position = new Vector2(width / 2 - tamY2 / 2, height / 2 - tamY / 2 + tamX2 + marginX);
-        cut = new Rectangle(padX, padY, tamX2, tamY2);
+        position = new Vector2(width / 2 - cut.Height / 2f, height / 2 - tamY / 2 + cut.Width + marginX);
         areaSetaCima = new Rectangle(
             (int)position.X,
-            (int)(position.Y - tamY2 + (tamY2 - tamX2)),
+            (int)(position.Y - cut.Width + (cut.Width - cut.Height)),
             cut.Height,
             cut.Width
         );
-        _spriteBatch.Draw(textureSeta, position, cut, Color.White, rotation, Vector2.Zero, zoom, flip, 0);
+        _spriteBatch.Draw(_arrowTexture, position, cut, Color.White, rotation, Vector2.Zero, zoom, flip, 0);
 
-        if (face == 4)
+        if (_currentFaceIndex == 4)
         {
-            // baixo
-            flip = SpriteEffects.None;
             rotation = MathHelper.PiOver2;
-            position = new Vector2(width / 2 + tamY2 / 2, height / 2 + tamY / 2 - tamX2 - marginX);
-            cut = new Rectangle(padX, padY, tamX2, tamY2);
+            position = new Vector2(width / 2 + cut.Height / 2f, height / 2 + tamY / 2 - cut.Width - marginX);
             areaSetaBaixo = new Rectangle(
-                (int)position.X - tamX2 - (tamY2 - tamX2),
-                (int)(position.Y),
+                (int)position.X - cut.Width - (cut.Height - cut.Width),
+                (int)position.Y,
                 cut.Height,
                 cut.Width
             );
-            _spriteBatch.Draw(textureSeta, position, cut, Color.White, rotation, Vector2.Zero, zoom, flip, 0);
+            _spriteBatch.Draw(_arrowTexture, position, cut, Color.White, rotation, Vector2.Zero, zoom, flip, 0);
         }
         else
         {
-            areaSetaBaixo = new Rectangle(0, 0, 0, 0);
+            areaSetaBaixo = Rectangle.Empty;
         }
     }
 
@@ -365,57 +507,10 @@ public class Engine : Game
         // baixo
         _spriteBatch.Draw(rect, areaSetaBaixo, Color.Red * 0.5f);
 
-        foreach (Area area in areas)
+        foreach (var area in CurrentFace.Areas)
         {
-            if (area.cube == cube && area.face == face)
-            {
-                _spriteBatch.Draw(rect, new Vector2(width / 2 + area.area.X, height / 2 + area.area.Y), area.area, Color.Blue * 0.5f);
-            }
-        }
-    }
-
-    private void setAreas()
-    {
-
-        areas.Add(new Area("cubo1", new Rectangle(11, -125, 145, 340), 0, 2));
-        areas.Add(new Area("cubo0", new Rectangle(-167, -109, 150, 325), 1, 0));
-        areas.Add(new Area("lock", new Rectangle(-60, -65, 50, 80), 0, 0));
-    }
-    private void processAreas(Point mousePos)
-    {
-        foreach (Area area in areas)
-        {
-            if (area.cube == cube && area.face == face)
-            {
-                Rectangle realArea = new Rectangle(
-                    (int)(width / 2 + area.area.X),
-                    (int)(height / 2 + area.area.Y),
-                    area.area.Width,
-                    area.area.Height
-                );
-                if (realArea.Contains(mousePos))
-                {
-                    // Console.WriteLine("Clicou na area " + area.id + " do cubo " + area.cube + " face " + area.face);
-                    switch (area.id)
-                    {
-                        case "cubo0":
-                            cube = 0;
-                            face = 0;
-                            break;
-                        case "cubo1":
-                            cube = 1;
-                            face = 2;
-                            break;
-                        case "lock":
-                            Console.WriteLine("Clicou na fechadura trancada!");
-                            textureObjects["lock_locked"] = (textureObjects["lock_locked"].Item1, true);
-                            break;
-                        default:
-                            Console.WriteLine("id desconhecido: "+area.id);
-                            break;
-                    }
-                }
-            }
+            var screenRect = TranslateAreaToScreen(area.Bounds);
+            _spriteBatch.Draw(rect, screenRect, Color.Blue * 0.5f);
         }
     }
 }

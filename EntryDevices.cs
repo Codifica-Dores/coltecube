@@ -28,7 +28,7 @@ static class EntryDevices
     }
     private static void updateKeyboard()
     {
-        if (tecladoAnterior != null && tecladoAnterior.IsKeyUp(Keys.Enter) && tecladoAtual.IsKeyDown(Keys.Enter))
+        if (tecladoAnterior.IsKeyUp(Keys.Enter) && tecladoAtual.IsKeyDown(Keys.Enter))
         {
             enter = true;
         }
@@ -36,7 +36,7 @@ static class EntryDevices
         {
             enter = false;
         }
-        if (tecladoAnterior != null && tecladoAnterior.IsKeyUp(Keys.Space) && tecladoAtual.IsKeyDown(Keys.Space))
+        if (tecladoAnterior.IsKeyUp(Keys.Space) && tecladoAtual.IsKeyDown(Keys.Space))
         {
             space = true;
         }
@@ -47,7 +47,7 @@ static class EntryDevices
     }
     private static void updateMouse()
     {
-        if (mouseAnterior != null && mouseAnterior.LeftButton == ButtonState.Released && mouseAtual.LeftButton == ButtonState.Pressed)
+        if (mouseAnterior.LeftButton == ButtonState.Released && mouseAtual.LeftButton == ButtonState.Pressed)
         {
             mleft = true;
         }
@@ -55,7 +55,7 @@ static class EntryDevices
         {
             mleft = false;
         }
-        if (mouseAnterior != null && mouseAnterior.RightButton == ButtonState.Released && mouseAtual.RightButton == ButtonState.Pressed)
+        if (mouseAnterior.RightButton == ButtonState.Released && mouseAtual.RightButton == ButtonState.Pressed)
         {
             mright = true;
         }
