@@ -2,9 +2,9 @@
 <SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Profile>Reach</Profile>
   <Platform>DesktopGL</Platform>
-  <Config />
+  <Config>d</Config>
   <SourceFiles>
-    <File>C:/Users/FORMULA2/Desktop/coltecube/Content/FonteArial.spritefont</File>
+    <File>/home/a2023952608/coltecube/Content/FonteArial.spritefont</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

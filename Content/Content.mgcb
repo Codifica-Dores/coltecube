@@ -4,7 +4,7 @@
 /outputDir:bin/$(Platform)
 /intermediateDir:obj/$(Platform)
 /platform:DesktopGL
-/config:
+/config:d
 /profile:Reach
 /compress:False
 

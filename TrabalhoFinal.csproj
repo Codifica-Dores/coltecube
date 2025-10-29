@@ -5,9 +5,9 @@
     <RollForward>Major</RollForward>
     <PublishReadyToRun>false</PublishReadyToRun>
     <TieredCompilation>false</TieredCompilation>
-    <MonoGamePlatform>DesktopGL</MonoGamePlatform>
-    <MGCBToolDirectory>$(UserProfile)\.dotnet\tools\</MGCBToolDirectory>
-    <MGCBCommand>mgcb.exe</MGCBCommand>
+  <MonoGamePlatform>DesktopGL</MonoGamePlatform>
+  <!-- Use cross-platform mgcb command; .exe suffix breaks on Linux -->
+  <MGCBCommand>mgcb</MGCBCommand>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>

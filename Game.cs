@@ -33,15 +33,19 @@ public class Engine : Game
     private Rectangle areaSetaDireita, areaSetaEsquerda, areaSetaCima, areaSetaBaixo;
     private Rectangle _viewportBounds;
     bool showAreas = false;
+    bool inShadowTransitionUp = true;
+    private int preFace = 0;
+    private string preCube = string.Empty;
 
     private CubeDefinition CurrentCube => _cubes[_currentCubeId];
     private CubeFaceDefinition CurrentFace => CurrentCube.GetFace(_currentFaceIndex);
+    private float shadowTransition = 0f;
     
     public Engine()
     {
         _graphics = new GraphicsDeviceManager(this);
-        width = 1000f;
-        height = 800f;
+        width = 1920f;
+        height = 1080f;
         _graphics.PreferredBackBufferWidth = (int)width;   // tamXura
         _graphics.PreferredBackBufferHeight = (int)height;   // altura
 
@@ -55,7 +59,7 @@ public class Engine : Game
         InitializeCubes();
         InitializeObjectTextures();
 
-        _arrowTexture = LoadTextureOrFallback("data/seta.png", "arrow");
+        _arrowTexture = LoadTextureOrFallback("seta.png", "arrow");
 
         Console.WriteLine(Directory.GetCurrentDirectory());
     }
@@ -65,19 +69,15 @@ public class Engine : Game
         {
             ["cubo0"] = new[]
             {
-                "data/labterm/saida.jpg",
-                "data/labterm/me.jpg",
-                "data/labterm/miniArmario.jpg",
-                "data/labterm/pcsNormais.jpg",
-                "data/labterm/tetoJunino.jpg"
+                "Escada/background.png",
+                "BanhoDeSol/background.png",
+                "Cantina/background.png",
+                "QuadraTrancada/background.png",
+                "corredor_hall.png"
             },
             ["cubo1"] = new[]
             {
-                "data/labterm/geladeira.jpg",
-                "data/labterm/cameras.jpg",
-                "data/labterm/janPeq.jpg",
-                "data/labterm/superPcs.jpg",
-                "data/labterm/tetoNormal.jpg"
+                "Escada/background.png",
             }
         };
 
@@ -86,7 +86,7 @@ public class Engine : Game
             var cubeDefinition = new CubeDefinition(cubeId);
             for (var faceIndex = 0; faceIndex < facePaths.Length; faceIndex++)
             {
-                var texture = LoadTextureOrFallback(facePaths[faceIndex], $"cubos:{cubeId}:{faceIndex}");
+                var texture = LoadTextureOrFallback($"coltecube/{facePaths[faceIndex]}", $"cubos:{cubeId}:{faceIndex}");
                 cubeDefinition.AddFace(new CubeFaceDefinition(faceIndex, texture));
             }
             _cubes[cubeId] = cubeDefinition;
@@ -131,7 +131,7 @@ public class Engine : Game
     {
         var objectPaths = new Dictionary<string, string>
         {
-            ["lock"] = "data/objects/lock_locked.png"
+            ["lock"] = "objects/lock_locked.png"
         };
 
         foreach (var (id, path) in objectPaths)
@@ -148,6 +148,7 @@ public class Engine : Game
 
     private Texture2D LoadTextureOrFallback(string path, string label, Color? fallbackColor = null)
     {
+        path = "data/" + path;
         try
         {
             if (File.Exists(path))
@@ -210,7 +211,7 @@ public class Engine : Game
 
         if (gamePadState.Buttons.Back == ButtonState.Pressed || keyboardState.IsKeyDown(Keys.Escape))
         { // Se está no objeto ativo e aperta para voltar
-            if (_activeObject?.IsActive )
+            if (_activeObject?.IsActive == true)
             {
                 HideActiveObject();
             }
@@ -224,14 +225,18 @@ public class Engine : Game
         // pega position
         EntryDevices.Update();
         Point mousePos = new Point(EntryDevices.x, EntryDevices.y);
+        bool preProcess_ActivateTransition = false;
+
         if (EntryDevices.enter)
         {
             Console.WriteLine("Real: " + mousePos.X + ", " + mousePos.Y + "; Relativa ao centro: " + (mousePos.X - width / 2) + ", " + (mousePos.Y - height / 2));
         }
 
-        bool objectActive = _activeObject?.IsActive;
+        bool objectActive = _activeObject?.IsActive == true;
+        int preProcess_Face = _currentFaceIndex;
+        string preProcess_Cube = _currentCubeId;
 
-        if (objectActive)
+        if (objectActive) // se o objeto estiver ativo
         {
             _activeObject!.Update(gameTime);
 
@@ -255,9 +260,18 @@ public class Engine : Game
                 HideActiveObject();
             }
         }
-        else if (EntryDevices.mleft)
+        else if (EntryDevices.mleft) // caso contrario
         {
             HandleSceneClick(mousePos);
+        }
+
+        if (preProcess_ActivateTransition)
+        {
+            int a = _currentFaceIndex;
+            string b = _currentCubeId;
+            _currentFaceIndex = preProcess_Face; _currentCubeId = preProcess_Cube;
+            preFace = a; preCube = b;
+            activateTransition();
         }
 
         if (EntryDevices.space) showAreas = !showAreas;
@@ -267,30 +281,38 @@ public class Engine : Game
 
     protected override void Draw(GameTime gameTime)
     {
-        GraphicsDevice.Clear(Color.CornflowerBlue);
+        GraphicsDevice.Clear(Color.Black);
         _spriteBatch.Begin();
         //
         // 400,295
-    int tamX = 4080 / 5;
-    int tamY = 3060 / 5;
-        float zoom = 0.2f;
+        float tamTelaNormal = 2048f;
+        float division = 1.5f;
+        int tamX = (int)(tamTelaNormal / division);
+        int tamY = (int)(tamTelaNormal/4*3 / division);
+        int padX = -150, padY = -25; // equal and 5
+        float zoom = 1f / division;       
         float rotation = 0f;
         Vector2 position = Vector2.Zero;
 
         bool objectActive = _activeObject?.IsActive == true;
 
+        // TODO: Add your drawing code here
         if (_currentFaceIndex == 4)
         {
-            position = new Vector2(width / 2 - tamX / 2, height / 2 - tamY / 2);
+            position = new Vector2(width / 2 - tamX / 2+ padX, height / 2 - tamY / 2+padY);
             if (lastFace % 2 == 1)
             {
                 rotation = MathHelper.PiOver2 * ((lastFace - 1));
-                position = new Vector2(width / 2 - tamX / 2 + tamX * (lastFace - lastFace % 2) / 2, height / 2 - tamY / 2 + tamY * (lastFace - lastFace % 2) / 2);
+                position = new Vector2(width / 2 - tamX / 2 + tamX * (lastFace - lastFace % 2) / 2 , height / 2 - tamY / 2 + tamY * (lastFace - lastFace % 2) / 2+padX);
+
+                // position = new Vector2(height / 2 - tamY / 2, width / 2 - tamX / 2);
             }
+            Console.WriteLine("rot.: " + rotation);
+
         }
         else
         {
-            position = new Vector2(width / 2 - tamX / 2, height / 2 - tamY / 2);
+            position = new Vector2(width / 2 - tamX / 2+padX, height / 2 - tamY / 2+padY);
         }
 
         Color color = objectActive ? new Color(100, 100, 100, 255) : Color.White;
@@ -299,9 +321,10 @@ public class Engine : Game
 
         DrawActiveObject();
 
-        setas(tamX, tamY, zoom, rotation);
+        setas(tamX, tamY,padX,padY, zoom, rotation);
 
         showareas(showAreas);
+        transi(tamX,tamY);
 
         _spriteBatch.End();
         base.Draw(gameTime);
@@ -314,8 +337,16 @@ public class Engine : Game
 
     private void HandleSceneClick(Point mousePos)
     {
+        string preProcess_Cube = _currentCubeId;
+        int preProcess_Face = _currentFaceIndex;
         if (HandleNavigationArrows(mousePos))
         {
+            int a = _currentFaceIndex;
+            string b = _currentCubeId;
+            _currentFaceIndex = preProcess_Face; _currentCubeId = preProcess_Cube;
+            preFace = a; preCube = b;
+            activateTransition();
+
             return;
         }
 
@@ -381,6 +412,7 @@ public class Engine : Game
         switch (area.Action.Kind)
         {
             case SceneAreaActionKind.ChangeCube:
+                activateTransition();
                 if (area.Action.TargetCubeId is { } targetCube && _cubes.ContainsKey(targetCube))
                 {
                     _currentCubeId = targetCube;
@@ -392,6 +424,7 @@ public class Engine : Game
                 }
                 break;
             case SceneAreaActionKind.ShowObject:
+                activateTransition();
                 if (area.Action.ObjectId is { } objectId)
                 {
                     ShowObject(objectId);
@@ -434,16 +467,21 @@ public class Engine : Game
         );
     }
 
-    private void setas(int tamX, int tamY, float zoom, float _)
+    private void setas(int tamX, int tamY,int lastPadX,int lastPadY, float zoom, float _)
     {
+        int padX = 5,padY = 5;
+        int tamY2 = 20;
+        int tamX2 = 17;
         int marginX = 5;
-        float rotation = 0f;
+        var rotation = 0f;
         var flip = SpriteEffects.None;
         zoom = 1f;
 
         var cut = _arrowSourceRect;
-
-        var position = new Vector2(width / 2 + tamX / 2 - cut.Width - marginX, height / 2 - cut.Height / 2f);
+        
+        var position = new Vector2(width / 2 + tamX / 2 - tamX2 - marginX + lastPadX, height / 2 - tamY2 / 2 + lastPadY);
+        // var cut = new Rectangle(padX, padY, tamX2, tamY2);
+        
         areaSetaDireita = new Rectangle(
             (int)position.X,
             (int)position.Y,
@@ -453,7 +491,7 @@ public class Engine : Game
         _spriteBatch.Draw(_arrowTexture, position, cut, Color.White, rotation, Vector2.Zero, zoom, flip, 0);
 
         flip = SpriteEffects.FlipHorizontally;
-        position = new Vector2(width / 2 - tamX / 2 + marginX, height / 2 - cut.Height / 2f);
+        position = new Vector2(width / 2 - tamX / 2 + marginX+lastPadX, height / 2 - cut.Height / 2f+lastPadY);
         areaSetaEsquerda = new Rectangle(
             (int)position.X,
             (int)position.Y,
@@ -464,10 +502,10 @@ public class Engine : Game
 
         flip = SpriteEffects.None;
         rotation = -MathHelper.PiOver2;
-        position = new Vector2(width / 2 - cut.Height / 2f, height / 2 - tamY / 2 + cut.Width + marginX);
+        position = new Vector2(width / 2 - cut.Height / 2f+lastPadX, height / 2 - tamY / 2 + cut.Width + marginX+lastPadY);
         areaSetaCima = new Rectangle(
             (int)position.X,
-            (int)(position.Y - cut.Width + (cut.Width - cut.Height)),
+            (int)(position.Y - cut.Width),
             cut.Height,
             cut.Width
         );
@@ -476,7 +514,7 @@ public class Engine : Game
         if (_currentFaceIndex == 4)
         {
             rotation = MathHelper.PiOver2;
-            position = new Vector2(width / 2 + cut.Height / 2f, height / 2 + tamY / 2 - cut.Width - marginX);
+            position = new Vector2(width / 2 + cut.Height / 2f+lastPadX, height / 2 + tamY / 2 - cut.Width - marginX+lastPadY);
             areaSetaBaixo = new Rectangle(
                 (int)position.X - cut.Width - (cut.Height - cut.Width),
                 (int)position.Y,
@@ -512,5 +550,53 @@ public class Engine : Game
             var screenRect = TranslateAreaToScreen(area.Bounds);
             _spriteBatch.Draw(rect, screenRect, Color.Blue * 0.5f);
         }
+    }
+
+    public void activateTransition()
+    {
+        shadowTransition = -1f;
+        Console.WriteLine("activateTransition");
+    }
+
+    private void transi(int tamX, int tamY)
+    {
+        Texture2D rect = new Texture2D(GraphicsDevice, 1, 1);
+        rect.SetData(new[] { Color.White });
+        float variation = 1 / 20f;
+        Console.WriteLine("transi");
+
+        // direita
+        if (shadowTransition == -1f)
+        {
+            shadowTransition = variation;
+        }
+        else if (shadowTransition > 0f)
+        {
+            if (shadowTransition < 1f && inShadowTransitionUp)
+            {
+                shadowTransition += variation;
+            }
+
+            if (shadowTransition >= 1f && inShadowTransitionUp)
+            {
+                inShadowTransitionUp = false;
+                _currentFaceIndex = preFace;
+                _currentCubeId = preCube;
+                shadowTransition -= variation;
+            }
+            else if (shadowTransition > 0f && !inShadowTransitionUp)
+            {
+                shadowTransition -= variation;
+            }
+
+            if (shadowTransition <= 0f && !inShadowTransitionUp)
+            {
+                inShadowTransitionUp = true;
+                shadowTransition = 0f;
+            }
+            Console.WriteLine("transi: " + shadowTransition + " " + inShadowTransitionUp);
+        }
+        _spriteBatch.Draw(rect, new Rectangle((int)0, (int)0, (int)width, (int)height), Color.Black * shadowTransition);
+        
     }
 }
