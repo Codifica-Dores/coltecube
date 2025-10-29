@@ -26,6 +26,8 @@ public class Engine : Game
     int lastFace;
     // debug
     bool showAreas = false;
+    private int ScreenWidth => GraphicsDevice?.Viewport.Width ?? _graphics.PreferredBackBufferWidth;
+    private int ScreenHeight => GraphicsDevice?.Viewport.Height ?? _graphics.PreferredBackBufferHeight;
 
     public Engine()
     {
@@ -41,23 +43,30 @@ public class Engine : Game
         IsMouseVisible = true;
 
         //sprites
-        string[,] locals = {
-            {
-                "data/labterm/saida.jpg",
-                "data/labterm/me.jpg",
-                "data/labterm/miniArmario.jpg",
-                "data/labterm/pcsNormais.jpg",
-                "data/labterm/tetoJunino.jpg"
-            },
-            {
-                "data/labterm/geladeira.jpg",
-                "data/labterm/cameras.jpg",
-                "data/labterm/janPeq.jpg",
-                "data/labterm/superPcs.jpg",
-                "data/labterm/tetoNormal.jpg"
+        string[,,] locals = {
+            // {
+            //     "data/labterm/saida.jpg",
+            //     "data/labterm/me.jpg",
+            //     "data/labterm/miniArmario.jpg",
+            //     "data/labterm/pcsNormais.jpg",
+            //     "data/labterm/tetoJunino.jpg"
+            // },
+            // {
+            //     "data/labterm/geladeira.jpg",
+            //     "data/labterm/cameras.jpg",
+            //     "data/labterm/janPeq.jpg",
+            //     "data/labterm/superPcs.jpg",
+            //     "data/labterm/tetoNormal.jpg"
+            // }
+            {// escada
+                {"Escada/background.png","Escada/"},
+                {"corredor_hall.png"},
+                {"corredor_hall.png"},
+                {"corredor_hall.png"},
+                {"corredor_hall.png"}
             }
         };
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < 1; i++)
         {
             for (int j = 0; j < 5; j++)
             {
@@ -72,7 +81,7 @@ public class Engine : Game
     }
     private Texture2D ReloadTexture(string path)
     {
-        using var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+        using var stream = new FileStream("data/coltecube/" + path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
         return Texture2D.FromStream(GraphicsDevice, stream);
     }
 
@@ -168,28 +177,30 @@ public class Engine : Game
 
     protected override void Draw(GameTime gameTime)
     {
-        GraphicsDevice.Clear(Color.CornflowerBlue);
+        GraphicsDevice.Clear(Color.Black);
         _spriteBatch.Begin();
         // Texture2D rect = new Texture2D(GraphicsDevice, 1, 1);
         // _spriteBatch.Draw(rect, new Rectangle(0, 0, (int)width, (int)height), null,Color.Black,0f,1f,0f,0);
         //
         // 400,295
-        float division = 3.5f;
-        int tamX = (int)(4080 / division);
-        int tamY = (int)(3060 / division);
-        int padX = 0, padY = 0; // equal and 5
-        float zoom = 1f / division;
+        float tamTelaNormal = 2048f;
+        float division = 1.5f;
+        int tamX = (int)(tamTelaNormal / division);
+        int tamY = (int)(tamTelaNormal/4*3 / division);
+        int padX = -150, padY = -25; // equal and 5
+        float zoom = 1f / division;       
         float rotation = 0f;
         Vector2 position = Vector2.Zero;
+        // for 
 
         // TODO: Add your drawing code here
         if (face == 4)
         {
-            position = new Vector2(width / 2 - tamX / 2, height / 2 - tamY / 2);
+            position = new Vector2(width / 2 - tamX / 2+ padX, height / 2 - tamY / 2+padY);
             if (lastFace % 2 == 1)
             {
                 rotation = MathHelper.PiOver2 * ((lastFace - 1));
-                position = new Vector2(width / 2 - tamX / 2 + tamX * (lastFace - lastFace % 2) / 2, height / 2 - tamY / 2 + tamY * (lastFace - lastFace % 2) / 2);
+                position = new Vector2(width / 2 - tamX / 2 + tamX * (lastFace - lastFace % 2) / 2 , height / 2 - tamY / 2 + tamY * (lastFace - lastFace % 2) / 2+padX);
 
                 // position = new Vector2(height / 2 - tamY / 2, width / 2 - tamX / 2);
             }
@@ -198,7 +209,7 @@ public class Engine : Game
         }
         else
         {
-            position = new Vector2(width / 2 - tamX / 2, height / 2 - tamY / 2);
+            position = new Vector2(width / 2 - tamX / 2+padX, height / 2 - tamY / 2+padY);
         }
         var flip = SpriteEffects.None;  // flipDrawSprite ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
         _spriteBatch.Draw(textureCubes[cube, face], position, null, Color.White, rotation, Vector2.Zero, zoom, flip, 0); // 192 x 96
@@ -211,11 +222,10 @@ public class Engine : Game
         base.Draw(gameTime);
     }
 
-    private void setas(int tamX, int tamY, int padX, int padY, float zoom, float initRotation)
+    private void setas(int tamX, int tamY, int lastPadX, int lastPadY, float zoom, float initRotation)
     {
         // direita
-        padX = 5;
-        padY = 5;
+        int padX = 5,padY = 5;
         int tamY2 = 20;
         int tamX2 = 17;
         int marginX = 5;
@@ -223,7 +233,7 @@ public class Engine : Game
         var flip = SpriteEffects.None;
         zoom = 1f;
 
-        var position = new Vector2(width / 2 + tamX / 2 - tamX2 - marginX, height / 2 - tamY2 / 2);
+        var position = new Vector2(width / 2 + tamX / 2 - tamX2 - marginX+lastPadX, height / 2 - tamY2 / 2+lastPadY);
         var cut = new Rectangle(padX, padY, tamX2, tamY2);
         areaSetaDireita = new Rectangle(
             (int)position.X,
@@ -235,7 +245,7 @@ public class Engine : Game
 
         // esquerda
         flip = SpriteEffects.FlipHorizontally;
-        position = new Vector2(width / 2 - tamX / 2 + marginX, height / 2 - tamY2 / 2);
+        position = new Vector2(width / 2 - tamX / 2 + marginX+lastPadX, height / 2 - tamY2 / 2+lastPadY);
         cut = new Rectangle(padX, padY, tamX2, tamY2);
         areaSetaEsquerda = new Rectangle(
             (int)position.X,
@@ -248,7 +258,7 @@ public class Engine : Game
         // cima
         flip = SpriteEffects.None;
         rotation = -MathHelper.PiOver2;
-        position = new Vector2(width / 2 - tamY2 / 2, height / 2 - tamY / 2 + tamX2 + marginX);
+        position = new Vector2(width / 2 - tamY2 / 2+lastPadX, height / 2 - tamY / 2 + tamX2 + marginX+lastPadY);
         cut = new Rectangle(padX, padY, tamX2, tamY2);
         areaSetaCima = new Rectangle(
             (int)position.X,
@@ -263,7 +273,7 @@ public class Engine : Game
             // baixo
             flip = SpriteEffects.None;
             rotation = MathHelper.PiOver2;
-            position = new Vector2(width / 2 + tamY2 / 2, height / 2 + tamY / 2 - tamX2 - marginX);
+            position = new Vector2(width / 2 + tamY2 / 2+lastPadX, height / 2 + tamY / 2 - tamX2 - marginX+lastPadY);
             cut = new Rectangle(padX, padY, tamX2, tamY2);
             areaSetaBaixo = new Rectangle(
                 (int)position.X - tamX2 - (tamY2 - tamX2),
@@ -388,7 +398,7 @@ public class Engine : Game
             }
             Console.WriteLine("transi: " + shadowTransition + " " + inShadowTransitionUp);
         }
-        _spriteBatch.Draw(rect, new Rectangle((int)(width - tamX) / 2, (int)(height - tamY) / 2, (int)tamX, (int)tamY), Color.Black * shadowTransition);
+        _spriteBatch.Draw(rect, new Rectangle((int)0, (int)0, (int)ScreenWidth, (int)ScreenHeight), Color.Black * shadowTransition);
         
     }
 }
