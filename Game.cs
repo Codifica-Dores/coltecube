@@ -43,7 +43,7 @@ public class Engine : Game
         IsMouseVisible = true;
 
         //sprites
-        string[,,] locals = {
+        string[,] locals = {
             // {
             //     "data/labterm/saida.jpg",
             //     "data/labterm/me.jpg",
@@ -59,11 +59,11 @@ public class Engine : Game
             //     "data/labterm/tetoNormal.jpg"
             // }
             {// escada
-                {"Escada/background.png","Escada/"},
-                {"corredor_hall.png"},
-                {"corredor_hall.png"},
-                {"corredor_hall.png"},
-                {"corredor_hall.png"}
+                "Escada/background.png",
+                "corredor_hall.png",
+                "corredor_hall.png",
+                "corredor_hall.png",
+                "corredor_hall.png"
             }
         };
         for (int i = 0; i < 1; i++)
