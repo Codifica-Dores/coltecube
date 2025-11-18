@@ -9,7 +9,8 @@ public enum SceneAreaActionKind
     None, // não faz nada
     Navigate, // muda a face do cubo
     ChangeCube, // muda o cubo
-    ShowObject // mostra um objeto
+    ShowObject, // mostra um objeto
+	ConfigReturn // retorna das configurações
 }
 
 public sealed record SceneAreaAction

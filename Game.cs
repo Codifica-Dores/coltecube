@@ -40,6 +40,12 @@ public class Engine : Game
     private CubeDefinition CurrentCube => _cubes[_currentCubeId];
     private CubeFaceDefinition CurrentFace => CurrentCube.GetFace(_currentFaceIndex);
     private float shadowTransition = 0f;
+	// branch Menu
+	private Dictionary<string, string[]> menuTextures = new Dictionary<string, string[]>();
+	private bool inMenu = false; // mudar pra true
+	private bool inConfiguracoes = false ; // mudar pra false
+	private readonly Dictionary<string, CubeDefinition> menus = new();
+	//
     
     public Engine()
     {
@@ -57,6 +63,8 @@ public class Engine : Game
         _viewportBounds = new Rectangle(0, 0, (int)width, (int)height);
 
         InitializeCubes();
+		InitializeMenus();
+		ConfigureAreas(); // deixa it here
         InitializeObjectTextures();
 
         _arrowTexture = LoadTextureOrFallback("seta.png", "arrow");
@@ -67,6 +75,7 @@ public class Engine : Game
     {
         var cubeTexturePaths = new Dictionary<string, string[]>
         {
+			
             ["cubo0"] = new[]
             {
                 "Escada/background.png",
@@ -92,8 +101,6 @@ public class Engine : Game
             _cubes[cubeId] = cubeDefinition;
         }
 
-        ConfigureAreas();
-
         if (_cubes.Count > 0)
         {
             _currentCubeId = _cubes.Keys.First();
@@ -102,6 +109,28 @@ public class Engine : Game
         _currentFaceIndex = 0;
         lastFace = 0;
     }
+	private void InitializeMenus()
+	{
+		menuTextures = new Dictionary<string, string[]>
+		{
+			["botoes"] = new[]
+			{
+				"botoes/bt001.png",
+			},
+		};
+
+		foreach (var a in menuTextures)
+		{
+			var local = new CubeDefinition(a.Key);
+			for (int b = 0; b < a.Value.Length; b++)
+			{
+				var chave =  $"menus:{a.Key}:{b}";
+				var texture = LoadTextureOrFallback($"/{a.Value[b]}",chave);
+				local.AddFace(new CubeFaceDefinition(b, texture));
+			}
+			menus[a.Key] = local;
+		}
+	}
 
     private void ConfigureAreas()
     {
@@ -125,6 +154,15 @@ public class Engine : Game
                 new Rectangle(-167, -109, 150, 325),
                 new SceneAreaAction(SceneAreaActionKind.ChangeCube, targetCubeId: "cubo0", targetFaceIndex: 0)));
         }
+
+		// menus
+		if (menus.TryGetValue("botoes", out var botoes))
+		{
+			botoes.GetFace(0).AddArea(new SceneArea(
+				"return",
+				new Rectangle((int)(width-616)/2,(int)(height-265)/2,616,265), // nã importa o tamanho
+				new SceneAreaAction(SceneAreaActionKind.ConfigReturn, targetCubeId: "configuracoes", targetFaceIndex: 0)));
+		}
     }
 
     private void InitializeObjectTextures()
@@ -179,7 +217,6 @@ public class Engine : Game
             _interactiveObjects[lockObject.Id] = lockObject;
         }
     }
-
 
     protected override void Initialize()
     {
@@ -274,16 +311,50 @@ public class Engine : Game
             activateTransition();
         }
 
-        if (EntryDevices.space) showAreas = !showAreas;
+        if (EntryDevices.tecladoAtual.IsKeyDown(Keys.P)) showAreas = !showAreas; // press p toogle areas
+		if (EntryDevices.space) inConfiguracoes = !inConfiguracoes; // press space toogle config
 
         base.Update(gameTime);
-    }
-
+    }	
+	
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(Color.Black);
         _spriteBatch.Begin();
-        //
+		if (inMenu)
+		{
+			Menu();
+		}else if (inConfiguracoes)
+		{
+			Configuracoes();
+		}
+		else{
+        	runDrawGame(gameTime);
+		}
+		_spriteBatch.End();
+        base.Draw(gameTime);
+    }
+	private void Menu()
+	{
+		
+	}
+	private void Configuracoes()
+	{
+		float tamTelaNormal = 616f;
+        float division = 1f; // 1.5f
+        int tamX = (int)(tamTelaNormal / division);
+        int tamY = (int)(tamTelaNormal/4*3 / division);
+        int padX = -150, padY = -25; // equal and 5
+        float zoom = 1f / division;       
+        float rotation = 0f;
+        Vector2 position = new Vector2((int)(width-616)/2,(int)(height-265)/2);
+        Color color = Color.White;
+
+		_spriteBatch.Draw(menus["botoes"].GetFace(0).Texture, position, null, color, rotation, Vector2.Zero, zoom, SpriteEffects.None, 0);
+	}
+	private void runDrawGame(GameTime gameTime)
+	{
+		//
         // 400,295
         float tamTelaNormal = 2048f;
         float division = 1.5f;
@@ -326,9 +397,8 @@ public class Engine : Game
         showareas(showAreas);
         transi(tamX,tamY);
 
-        _spriteBatch.End();
-        base.Draw(gameTime);
-    }
+       
+	}
 
     private void DrawActiveObject()
     {
@@ -430,6 +500,10 @@ public class Engine : Game
                     ShowObject(objectId);
                 }
                 break;
+			case SceneAreaActionKind.ConfigReturn:
+				activateTransition();
+				inConfiguracoes = false;
+				break;
         }
     }
 
