@@ -40,21 +40,12 @@ public abstract class View
             SpriteEffects.None, 0f
         );
 
-		// foreach (var obj in _things){
-		// 	spriteBatch.Draw(
-		// 		obj.texture,
-		// 		obj.position,
-		// 		null, Color.White, 0f,
-		// 		textureCenterOrigin,
-		// 		_backgroundScale,
-		// 		SpriteEffects.None, 0f
-		// 	);
-		// }
-
         // Desenha os Objetos
+		var center = new Vector2(graphicsDevice.Viewport.Width/ 2f-Game1.ESPACO_LATERAL_ITEMS/2, graphicsDevice.Viewport.Height / 2f);
         foreach (var obj in _objects)
         {
-            obj.Draw(spriteBatch);
+            obj.Draw(spriteBatch, center);
         }
     }
+	public void addFunc(string name, Action action){}
 }

@@ -116,11 +116,11 @@ namespace coltecube.Scenes
         {
             _activeView.Draw(Core.SpriteBatch, Core.GraphicsDevice);
 
-            _arrowLeft.Draw(Core.SpriteBatch);
-            _arrowRight.Draw(Core.SpriteBatch);
-			_arrowUp.Draw(Core.SpriteBatch);
-			_arrowDown.Draw(Core.SpriteBatch);
-
+			var center = new Vector2(Core.GraphicsDevice.Viewport.Width / 2f-Game1.ESPACO_LATERAL_ITEMS/2, Core.GraphicsDevice.Viewport.Height / 2f);
+            _arrowLeft.Draw(Core.SpriteBatch, center);
+            _arrowRight.Draw(Core.SpriteBatch, center);
+			_arrowUp.Draw(Core.SpriteBatch, center);
+			_arrowDown.Draw(Core.SpriteBatch, center);
             _viewTransition.Draw(Core.SpriteBatch, Core.GraphicsDevice.Viewport);
 
             base.Draw(gameTime);

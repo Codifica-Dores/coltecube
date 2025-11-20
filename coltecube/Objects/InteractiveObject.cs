@@ -22,6 +22,7 @@ public class InteractiveObject : GameObject
         base.Update(gameTime, mouse);
         if (IsClicked(mouse))
         {
+			Console.WriteLine("ooooooo");
             OnClick?.Invoke();
         }
     }

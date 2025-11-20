@@ -39,10 +39,29 @@ public class GameObject
     {
         if (IsVisible && Texture != null)
         {
-		Console.WriteLine("Desenhando objeto em " + Position);
+			// Console.WriteLine("Desenhando objeto em " + Position + " ... " +Texture.Width + "-" +Texture.Height);
             spriteBatch.Draw(
                 Texture,
                 Position,     // Posição (top-left)
+                null,         // sourceRect (textura inteira)
+                Color.White,
+                0f,           // Rotação (nenhuma)
+                Vector2.Zero, // Origem (top-left)
+                Scale,        // Escala proporcional!
+                SpriteEffects.None,
+                0f
+            );
+        }
+			
+    }
+	public virtual void Draw(SpriteBatch spriteBatch, Vector2 screenCenter)
+    {
+        if (IsVisible && Texture != null)
+        {
+			// Console.WriteLine("Desenhando objeto em " + Position + " ... " +Texture.Width + "-" +Texture.Height);
+            spriteBatch.Draw(
+                Texture,
+                Position + screenCenter,     // Posição (top-left)
                 null,         // sourceRect (textura inteira)
                 Color.White,
                 0f,           // Rotação (nenhuma)

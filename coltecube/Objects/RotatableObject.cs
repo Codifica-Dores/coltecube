@@ -16,7 +16,7 @@ public class RotatableObject : InteractiveObject
         Rotation = 0f;
     }
 
-    public override void Draw(SpriteBatch spriteBatch)
+    public override void Draw(SpriteBatch spriteBatch, Vector2 center)
     {
         if (IsVisible && Texture != null)
         {
@@ -25,8 +25,8 @@ public class RotatableObject : InteractiveObject
 
             // Calcula o centro da imagem na tela
             Vector2 drawPosition = new Vector2(
-                Position.X + (Texture.Width * Scale) / 2f,
-                Position.Y + (Texture.Height * Scale) / 2f
+                Position.X + (Texture.Width * Scale) / 2f+center.X,
+                Position.Y + (Texture.Height * Scale) / 2f+center.Y
             );
 
             spriteBatch.Draw(

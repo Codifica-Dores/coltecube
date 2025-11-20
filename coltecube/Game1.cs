@@ -25,7 +25,7 @@ public class Game1 : Core
     {
         base.Initialize();
 
-        Core.ChangeScene(new MainMenuScene());
+        Core.ChangeScene(new MainMenuScene()); // mudar aqui > MainMenuScene()
     }
 
     protected override void Update(GameTime gameTime)

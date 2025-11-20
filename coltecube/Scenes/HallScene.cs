@@ -23,8 +23,13 @@ namespace coltecube.Scenes
             _viewTransition.OnFadeOutComplete += SwapViewLogic; 
 
             // Cria e Carrega todas as Vistas
-            _views[FaceView.Escada] = new Escada();
+			var esc = new Escada();
+            _views[FaceView.Escada] = esc;
             _views[FaceView.Escada].LoadContent(this.Content);
+
+            // esc.escada.OnClick += () =>{
+            //     Core.ChangeScene(new MainMenuScene());
+            // };
 
             _views[FaceView.Quadra] = new Quadra();
             _views[FaceView.Quadra].LoadContent(this.Content);
@@ -52,17 +57,18 @@ namespace coltecube.Scenes
             // Esquerda
 			int paddingX = 80;
 			int paddingY = 80;
-            _arrowLeft = new RotatableObject(arrowTex, new Vector2(0+paddingX,  _activeView._background.Height/2*_activeView._backgroundScale), arrowScale);
+			// relativo ao centro do background
+            _arrowLeft = new RotatableObject(arrowTex, new Vector2(paddingX-_activeView._background.Width/2*_activeView._backgroundScale, 0), arrowScale);
             _arrowLeft.Rotation = MathHelper.ToRadians(90f);
             _arrowLeft.OnClick += () => RotateView(false); 
 
             // Direita
-            _arrowRight = new RotatableObject(arrowTex, new Vector2((_activeView._background.Width-Game1.ESPACO_LATERAL_ITEMS)*_activeView._backgroundScale,  _activeView._background.Height/2*_activeView._backgroundScale), arrowScale);
+            _arrowRight = new RotatableObject(arrowTex, new Vector2(-paddingX+_activeView._background.Width/2*_activeView._backgroundScale, 0), arrowScale);
             _arrowRight.Rotation = MathHelper.ToRadians(-90f);
             _arrowRight.OnClick += () => RotateView(true); 
 
             // Cima
-            _arrowUp = new RotatableObject(arrowTex, new Vector2((_activeView._background.Width/2)*_activeView._backgroundScale, paddingY), arrowScale);
+            _arrowUp = new RotatableObject(arrowTex, new Vector2(0,-_activeView._background.Height/2*_activeView._backgroundScale+paddingY), arrowScale);
             _arrowUp.Rotation = MathHelper.ToRadians(180f);
             _arrowUp.OnClick += () => 
             {

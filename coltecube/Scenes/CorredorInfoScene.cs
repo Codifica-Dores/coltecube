@@ -11,7 +11,7 @@ namespace coltecube.Scenes
 {
     // Enum para as vistas
 
-    public class CorredorInfo : GeralScene
+    public class CorredorInfoScene : GeralScene
     {
 
         public override void LoadContent()
