@@ -10,8 +10,8 @@ namespace coltecube.Scenes;
 // Representa uma única face/vista de um cubo (como uma parede).
 public abstract class View
 {
-    protected Texture2D _background;
-    protected float _backgroundScale = 0.32f;
+    public Texture2D _background; // public pra usar em todas as scenes
+    public float _backgroundScale = (Game1.NATIVE_HEIGHT)/1536f;  // public pra usar em todas as scenes
     protected List<GameObject> _objects = new List<GameObject>();
 
     public virtual void LoadContent(ContentManager content) { }
@@ -26,7 +26,7 @@ public abstract class View
     public virtual void Draw(SpriteBatch spriteBatch, GraphicsDevice graphicsDevice)
     {
         // Desenha o Fundo (Centralizado) 
-        Vector2 screenCenter = new Vector2(graphicsDevice.Viewport.Width / 2f, graphicsDevice.Viewport.Height / 2f);
+        Vector2 screenCenter = new Vector2(graphicsDevice.Viewport.Width / 2f-Game1.ESPACO_LATERAL_ITEMS/2, graphicsDevice.Viewport.Height / 2f);
         Vector2 textureCenterOrigin = new Vector2(_background.Width / 2f, _background.Height / 2f);
 
         spriteBatch.Draw(

@@ -65,17 +65,19 @@ namespace coltecube.Scenes
             float arrowScale = 0.015f;
             
             // Esquerda
-            _arrowLeft = new RotatableObject(arrowTex, new Vector2(400, 300), arrowScale);
+			int paddingX = 80;
+			int paddingY = 80;
+            _arrowLeft = new RotatableObject(arrowTex, new Vector2(0+paddingX,  _activeView._background.Height/2*_activeView._backgroundScale), arrowScale);
             _arrowLeft.Rotation = MathHelper.ToRadians(90f);
             _arrowLeft.OnClick += () => RotateView(false); 
 
             // Direita
-            _arrowRight = new RotatableObject(arrowTex, new Vector2(500, 300), arrowScale);
+            _arrowRight = new RotatableObject(arrowTex, new Vector2((_activeView._background.Width-Game1.ESPACO_LATERAL_ITEMS)*_activeView._backgroundScale,  _activeView._background.Height/2*_activeView._backgroundScale), arrowScale);
             _arrowRight.Rotation = MathHelper.ToRadians(-90f);
             _arrowRight.OnClick += () => RotateView(true); 
 
             // Cima
-            _arrowUp = new RotatableObject(arrowTex, new Vector2(500, 200), arrowScale);
+            _arrowUp = new RotatableObject(arrowTex, new Vector2((_activeView._background.Width/2)*_activeView._backgroundScale, paddingY), arrowScale);
             _arrowUp.Rotation = MathHelper.ToRadians(180f);
             _arrowUp.OnClick += () => 
             {
@@ -164,6 +166,8 @@ namespace coltecube.Scenes
 
             _arrowLeft.Update(gameTime, Core.Input.Mouse);
             _arrowRight.Update(gameTime, Core.Input.Mouse);
+			_arrowUp.Update(gameTime, Core.Input.Mouse);
+			_arrowDown.Update(gameTime, Core.Input.Mouse);
 
             _activeView.Update(gameTime, Core.Input.Mouse);
 
@@ -176,6 +180,8 @@ namespace coltecube.Scenes
 
             _arrowLeft.Draw(Core.SpriteBatch);
             _arrowRight.Draw(Core.SpriteBatch);
+			_arrowUp.Draw(Core.SpriteBatch);
+			_arrowDown.Draw(Core.SpriteBatch);
 
             _viewTransition.Draw(Core.SpriteBatch, Core.GraphicsDevice.Viewport);
 

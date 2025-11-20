@@ -8,8 +8,9 @@ namespace coltecube;
 
 public class Game1 : Core
 {
-    public const int NATIVE_WIDTH = 960;
-    public const int NATIVE_HEIGHT = 540;
+    public const int NATIVE_HEIGHT = 960;
+	public const int ESPACO_LATERAL_ITEMS = 200;
+    public const int NATIVE_WIDTH = NATIVE_HEIGHT * 4/3+ESPACO_LATERAL_ITEMS; // 4:3 Aspect Ratio minus side space
 
     // Construtor
     public Game1()

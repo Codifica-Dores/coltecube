@@ -14,7 +14,7 @@ public class Quadra : View
     public override void LoadContent(ContentManager content)
     {
         _background = content.Load<Texture2D>("Backgrounds/Hall_Quadra");
-        _backgroundScale = 0.32f;
+        // _backgroundScale = 0.32f;
            
         /*var cadeadoTexture = content.Load<Texture2D>("Objects/Cadeado");
         cadeado = new InteractiveObject(cadeadoTexture, new Vector2(50, 350), 1.2f);
