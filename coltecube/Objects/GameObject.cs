@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using MonoGameLibrary.Input;
+using System;
 
 namespace coltecube.Objects;
 
@@ -38,6 +39,7 @@ public class GameObject
     {
         if (IsVisible && Texture != null)
         {
+		Console.WriteLine("Desenhando objeto em " + Position);
             spriteBatch.Draw(
                 Texture,
                 Position,     // Posição (top-left)
@@ -50,5 +52,6 @@ public class GameObject
                 0f
             );
         }
+			
     }
 }

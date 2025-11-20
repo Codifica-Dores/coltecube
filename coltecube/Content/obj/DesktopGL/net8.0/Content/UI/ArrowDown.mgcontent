@@ -3,11 +3,11 @@
   <SourceFile>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/UI/ArrowDown.png</SourceFile>
   <SourceTime>2025-11-20T14:43:59.6867216-03:00</SourceTime>
   <DestFile>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/bin/DesktopGL/Content/UI/ArrowDown.xnb</DestFile>
-  <DestTime>2025-11-20T14:44:05.4763068-03:00</DestTime>
+  <DestTime>2025-11-20T17:11:49.7941946-03:00</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2025-06-02T07:31:02-03:00</ImporterTime>
+  <ImporterTime>2025-10-20T11:25:32-03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2025-06-02T07:31:02-03:00</ProcessorTime>
+  <ProcessorTime>2025-10-20T11:25:32-03:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>255,0,255,255</Value>

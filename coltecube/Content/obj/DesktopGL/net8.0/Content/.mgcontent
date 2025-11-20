@@ -13,8 +13,176 @@
     <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Fonts/File.spritefont</File>
     <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/UI/ArrowDown.png</File>
     <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/UI/Button.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/vinheta.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/313/background.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/313/bakgound.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/313/papeis.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/313/visaoGeral.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/BanhoDeSol/background.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/BanhoDeSol/sol_na_banheira.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/BanhoDeSol/visaoGeral.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Cantina/armario(aberto).png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Cantina/armario(fechado).png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Cantina/background.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Cantina/CantinaVisaoGeral(armario-aberto).png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Cantina/CantinaVisaoGeral(panela-fogo).png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Cantina/fogo.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Cantina/fogão.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Cantina/panela.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/cenariosQuadra/background.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/cenariosQuadra/onibus.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/cenariosQuadra/parede.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/cenariosQuadra/portao.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/cenariosQuadra/quadra.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/cenariosQuadra/visaoGeral.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Elevador-sala/backgound.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Elevador-sala/Calendario (1999).png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Elevador-sala/Calendario (2025).png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Elevador-sala/elevador.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Elevador-sala/porta.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Elevador-sala/porta_aberta.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Escada/ampulheta.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Escada/background.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Escada/escada.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Escada/visaoGeral.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Escada-elevador/background.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Escada-elevador/elevador.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Escada-elevador/VisaoGeral.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Lab-amarelo-TI/background.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Lab-amarelo-TI/porta.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Lab-amarelo-TI/porta_aberta.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Lab-amarelo-TI/visaoGeral.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/LabAmarelo/arcondicionado.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/LabAmarelo/armario.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/LabAmarelo/armarioAberto.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/LabAmarelo/background.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/LabAmarelo/mesas.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/LabAmarelo/quadro_branco.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/LabAmarelo/suporte_controle_arcondicionado.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/LabAmarelo/tv.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/LabAmarelo/visaoGeral.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Labs-vermelho-verde/backgound.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Labs-vermelho-verde/escaninho.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Labs-vermelho-verde/escaninho_aberto.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Labs-vermelho-verde/escaninho_com_pe_de_cabra.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Labs-vermelho-verde/pe_de_cabra.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Labs-vermelho-verde/porta_lab_verde.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Labs-vermelho-verde/porta_lab_verde_aberta.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Labs-vermelho-verde/porta_lab_vermelho.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Labs-vermelho-verde/porta_lab_vermelho_aberta.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Labs-vermelho-verde/visaoGeral.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/LabVerde/background.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/LabVerde/computator.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/LabVerde/controle.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/LabVerde/visaoGeral.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/LabVermelho/adesivo.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/LabVermelho/background.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/LabVermelho/computador.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/LabVermelho/impressora.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/LabVermelho/visaoGeral.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Madeira/background.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Metal/background.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Metal/portaMetal.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Mural/background.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Mural/mural.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/QuadraDestrancada/background.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/QuadraDestrancada/cadeado.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/QuadraTrancada/background.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/QuadraTrancada/cadeado.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/SalaMetal/background.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/SalaOswaldo/background.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/SalaOswaldo/coisaEletrica.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/SalaOswaldo/digital.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/SalaOswaldo/portaOswaldo.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Util/digital.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Util/digital_desbloqueada.png</File>
+    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Util/digital_trancada.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
