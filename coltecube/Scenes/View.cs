@@ -29,6 +29,7 @@ public abstract class View
         Vector2 screenCenter = new Vector2(graphicsDevice.Viewport.Width / 2f-Game1.ESPACO_LATERAL_ITEMS/2, graphicsDevice.Viewport.Height / 2f);
         Vector2 textureCenterOrigin = new Vector2(_background.Width / 2f, _background.Height / 2f);
 
+		Console.WriteLine("Desenhando objeto em ");
         spriteBatch.Draw(
             _background,
             screenCenter,
