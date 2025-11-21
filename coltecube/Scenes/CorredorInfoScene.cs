@@ -19,6 +19,7 @@ namespace coltecube.Scenes
         {
             // Configura a Transição da Vista
 			indiceFaceView = 6;
+			// _nextViewKey = FaceView.Mural;
             _viewTransition = new Transition();
             _viewTransition.LoadContent(Core.GraphicsDevice);
             _viewTransition.OnFadeOutComplete += SwapViewLogic; 
@@ -44,8 +45,8 @@ namespace coltecube.Scenes
             _views[FaceView.Teto].LoadContent(this.Content);
             
             // Define a Vista Inicial
-            _currentViewKey = FaceView.Mural;
-            _activeView = _views[_currentViewKey];
+            _currentViewKey = 0; // sempre 0
+            _activeView = _views[_currentViewKey+indiceFaceView];
 
             DefineArrows();
         }

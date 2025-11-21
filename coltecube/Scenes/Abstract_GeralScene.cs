@@ -46,18 +46,18 @@ namespace coltecube.Scenes
 			int paddingX = 80;
 			int paddingY = 80;
 			// relativo ao centro do background
-            _arrowLeft = new RotatableObject(arrowTex, new Vector2(paddingX-_activeView._background.Width/2*_activeView._backgroundScale, 0), arrowScale);
+            _arrowLeft = new RotatableObject(arrowTex, new Vector2(paddingX,_activeView._background.Height/2*_activeView._backgroundScale), arrowScale);
             _arrowLeft.Rotation = MathHelper.ToRadians(90f);
             _arrowLeft.OnClick += () => RotateView(false); 
 			_arrowLeft.name = "left";
 
             // Direita
-            _arrowRight = new RotatableObject(arrowTex, new Vector2(-paddingX+_activeView._background.Width/2*_activeView._backgroundScale, 0), arrowScale);
+            _arrowRight = new RotatableObject(arrowTex, new Vector2(-paddingX+_activeView._background.Width*_activeView._backgroundScale, _activeView._background.Height*_activeView._backgroundScale/2), arrowScale);
             _arrowRight.Rotation = MathHelper.ToRadians(-90f);
             _arrowRight.OnClick += () => RotateView(true); 
 
             // Cima
-            _arrowUp = new RotatableObject(arrowTex, new Vector2(0,-_activeView._background.Height/2*_activeView._backgroundScale+paddingY), arrowScale);
+            _arrowUp = new RotatableObject(arrowTex, new Vector2(_activeView._background.Width/2*_activeView._backgroundScale,paddingY), arrowScale);
             _arrowUp.Rotation = MathHelper.ToRadians(180f);
             _arrowUp.OnClick += () => 
             {
@@ -123,6 +123,8 @@ namespace coltecube.Scenes
 
             int currentIndex = (int)_currentViewKey;
 
+			Console.WriteLine("index: " + currentIndex);
+			Console.WriteLine("current index: " + _currentViewKey);
             if (toRight)
             {
                 currentIndex++;
@@ -133,6 +135,7 @@ namespace coltecube.Scenes
                 currentIndex--;
                 if (currentIndex < 0) currentIndex = totalWalls - 1;
             }
+			Console.WriteLine("new index: " + currentIndex);
             StartViewChange((FaceView)currentIndex);
         }
 
@@ -161,11 +164,11 @@ namespace coltecube.Scenes
         {
             _activeView.Draw(Core.SpriteBatch, Core.GraphicsDevice);
 
-			var center = new Vector2(Core.GraphicsDevice.Viewport.Width / 2f-Game1.ESPACO_LATERAL_ITEMS/2, Core.GraphicsDevice.Viewport.Height / 2f);
-            _arrowLeft.Draw(Core.SpriteBatch, center);
-            _arrowRight.Draw(Core.SpriteBatch, center);
-			_arrowUp.Draw(Core.SpriteBatch, center);
-			_arrowDown.Draw(Core.SpriteBatch, center);
+			// var center = new Vector2(Core.GraphicsDevice.Viewport.Width / 2f-Game1.ESPACO_LATERAL_ITEMS/2, Core.GraphicsDevice.Viewport.Height / 2f);
+            _arrowLeft.Draw(Core.SpriteBatch);
+            _arrowRight.Draw(Core.SpriteBatch);
+			_arrowUp.Draw(Core.SpriteBatch);
+			_arrowDown.Draw(Core.SpriteBatch);
             _viewTransition.Draw(Core.SpriteBatch, Core.GraphicsDevice.Viewport);
 
             base.Draw(gameTime);

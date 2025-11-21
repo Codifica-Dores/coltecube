@@ -25,6 +25,8 @@ public abstract class View
         foreach (var obj in _objects) obj.Update(gameTime, mouse);
     }
 
+	public static Vector2 center;
+
     public virtual void Draw(SpriteBatch spriteBatch, GraphicsDevice graphicsDevice)
     {
         // Desenha o Fundo (Centralizado) 
@@ -44,8 +46,9 @@ public abstract class View
 		var center = new Vector2(graphicsDevice.Viewport.Width/ 2f-Game1.ESPACO_LATERAL_ITEMS/2, graphicsDevice.Viewport.Height / 2f);
         foreach (var obj in _objects)
         {
-            obj.Draw(spriteBatch, center);
+            obj.Draw(spriteBatch);
         }
+		View.center = center;
     }
 	public void addFunc(string name, Action action){}
 }

@@ -16,7 +16,7 @@ namespace coltecube.Scenes.Hall;
         {
             _background = content.Load<Texture2D>("Backgrounds/Hall_Escada");
 			escada = new InteractiveObject(content.Load<Texture2D>("Backgrounds/Escada/escada"), new Vector2(
-                -_background.Width/2*_backgroundScale,-_background.Height/2*_backgroundScale               
+                0,0               
             ), _backgroundScale);
 
 			_objects.Add(escada);
@@ -24,10 +24,10 @@ namespace coltecube.Scenes.Hall;
 
 			//
 			escada.Bounds = new Rectangle(
-				(int)(escada.Bounds.X),
-				(int)(escada.Bounds.Y),
+				(int)(_background.Width/2*_backgroundScale),
+				(int)(_background.Height/2*_backgroundScale),
 				(int)(300),
 				(int)(300)
-			);		
-        }
+			);
+		}
     }

@@ -54,20 +54,32 @@ public class InteractiveObject : GameObject
     
     public override void Update(GameTime gameTime, MouseInfo mouse)
     {
-        base.Update(gameTime, mouse);
+		
         if (IsClicked(mouse))
         {
             OnClick?.Invoke();
-			Console.WriteLine("ooooooo");
-        }
+			// Console.WriteLine("ooooooo");
+        }else{
+			// Console.WriteLine("pos: "+Bounds.X+" "+Bounds.Y+" tam: "+Bounds.Width+" "+Bounds.Height);
+			// Console.WriteLine(this.name+" "+mouse.Position);
+			// Console.WriteLine(Bounds.Contains(mouse.Position)+" "+mouse.WasButtonJustPressed(MouseButton.Left));
+		}
+        base.Update(gameTime, mouse);
     }
 
-	// public override void Draw(SpriteBatch spriteBatch, Vector2 center){
-		
-	// 	Console.WriteLine("pos: "+Bounds.X+" "+Bounds.Y+" tam: "+Bounds.Width+" "+Bounds.Height);
-	// 	if (Game1.showLocals) spriteBatch.Draw(Game1.Pixelw, new Rectangle(Bounds.X+(int)center.X, Bounds.Y+(int)center.Y, Bounds.Width, Bounds.Height), new Color(255, 0, 0, 80));
+	public override void Draw(SpriteBatch spriteBatch){
+		// this.Bounds = new Rectangle(
+		// 	(int)(center.X),
+		// 	(int)(center.Y),
+		// 	(int)(300),
+		// 	(int)(300)
+		// );	
+		this.DrawArea(spriteBatch);
+		base.Draw(spriteBatch);
+	}
 
-
-	// 	base.Draw(spriteBatch,center);
-	// }
+	public void DrawArea(SpriteBatch spriteBatch){
+		// Console.WriteLine("pos: "+Bounds.X+" "+Bounds.Y+" tam: "+Bounds.Width+" "+Bounds.Height);
+		if (Game1.showLocals) spriteBatch.Draw(Game1.Pixelw, new Rectangle(Bounds.X, Bounds.Y, Bounds.Width, Bounds.Height), new Color(255, 0, 0, 80));
+	}
 }

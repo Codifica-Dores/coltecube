@@ -19,7 +19,7 @@ public class RotatableObject : InteractiveObject
     public override void Update(GameTime gameTime, MonoGameLibrary.Input.MouseInfo mouse)
     {
 		// Console.WriteLine("oxi "+this.name);
-		clickInner(mouse);
+		// clickInner(mouse);
 		base.Update(gameTime, mouse);
         // // Calcula a posição real na tela da sprite (mesma lógica do Draw)
         // var viewport = MonoGameLibrary.Core.GraphicsDevice.Viewport;
@@ -49,7 +49,7 @@ public class RotatableObject : InteractiveObject
         // }
     }
 
-    public override void Draw(SpriteBatch spriteBatch, Vector2 center)
+    public override void Draw(SpriteBatch spriteBatch)
     {
         if (IsVisible && Texture != null)
         {
@@ -58,8 +58,8 @@ public class RotatableObject : InteractiveObject
 
             // Calcula o centro da imagem na tela
             Vector2 drawPosition = new Vector2(
-                Position.X + (Texture.Width * Scale) / 2f+center.X,
-                Position.Y + (Texture.Height * Scale) / 2f+center.Y
+                Position.X + (Texture.Width * Scale) / 2f,
+                Position.Y + (Texture.Height * Scale) / 2f
             );
 
             spriteBatch.Draw(
@@ -74,5 +74,7 @@ public class RotatableObject : InteractiveObject
                 0f
             );
         }
+		
+		base.DrawArea(spriteBatch);
     }
 }

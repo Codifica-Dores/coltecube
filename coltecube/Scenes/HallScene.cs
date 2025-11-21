@@ -49,8 +49,8 @@ namespace coltecube.Scenes
             _views[FaceView.Teto].LoadContent(this.Content);
             
             // Define a Vista Inicial
-            _currentViewKey = FaceView.Escada;
-            _activeView = _views[_currentViewKey];
+            _currentViewKey = 0; // sempre 0
+            _activeView = _views[_currentViewKey+indiceFaceView];
 
             
             
