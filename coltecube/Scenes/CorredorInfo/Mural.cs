@@ -13,7 +13,7 @@ public class Mural : View
 
     public override void LoadContent(ContentManager content)
     {
-        _background = content.Load<Texture2D>("Backgrounds/Mural/background.png");
+        _background = content.Load<Texture2D>("Backgrounds/Mural/background");
 		// _
            
         /*var cadeadoTexture = content.Load<Texture2D>("Objects/Cadeado");

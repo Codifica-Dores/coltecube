@@ -13,12 +13,8 @@ public class GameObject
     public bool IsVisible { get; set; } = true;
     
     // O retângulo (Bounds)
-    public Rectangle Bounds => new Rectangle(
-        (int)Position.X,
-        (int)Position.Y,
-        (int)(Texture.Width * Scale),
-        (int)(Texture.Height * Scale)
-    );
+    public Rectangle Bounds;
+	public string name;
 
     // Construtor
     public GameObject(Texture2D texture, Vector2 position, float scale = 1.0f)
@@ -26,6 +22,14 @@ public class GameObject
         Texture = texture;
         Position = position;
         Scale = scale;
+		name = "-Sem Nome-";
+
+		Bounds = new Rectangle(
+			(int)Position.X,
+			(int)Position.Y,
+			(int)(Texture.Width * Scale),
+			(int)(Texture.Height * Scale)
+		);
     }
 
     //Mouse
@@ -40,6 +44,7 @@ public class GameObject
         if (IsVisible && Texture != null)
         {
 			// Console.WriteLine("Desenhando objeto em " + Position + " ... " +Texture.Width + "-" +Texture.Height);
+			
             spriteBatch.Draw(
                 Texture,
                 Position,     // Posição (top-left)
@@ -59,6 +64,8 @@ public class GameObject
         if (IsVisible && Texture != null)
         {
 			// Console.WriteLine("Desenhando objeto em " + Position + " ... " +Texture.Width + "-" +Texture.Height);
+			// Bounds.X+=screenCenter.X;
+			// Bounds.Y+=screenCenter.Y;
             spriteBatch.Draw(
                 Texture,
                 Position + screenCenter,     // Posição (top-left)
@@ -73,4 +80,6 @@ public class GameObject
         }
 			
     }
+
+	
 }

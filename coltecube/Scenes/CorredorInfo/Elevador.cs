@@ -13,7 +13,7 @@ public class Elevador : View
 
     public override void LoadContent(ContentManager content)
     {
-        _background = content.Load<Texture2D>("Backgrounds/Escada-elevador/background.png");
+        _background = content.Load<Texture2D>("Backgrounds/Escada-elevador/background");
 		// _
            
         /*var cadeadoTexture = content.Load<Texture2D>("Objects/Cadeado");

@@ -13,15 +13,18 @@ namespace coltecube.Scenes
 
     public class CorredorInfoScene : GeralScene
     {
+	
 
         public override void LoadContent()
         {
             // Configura a Transição da Vista
+			indiceFaceView = 6;
             _viewTransition = new Transition();
             _viewTransition.LoadContent(Core.GraphicsDevice);
             _viewTransition.OnFadeOutComplete += SwapViewLogic; 
 
             // Cria e Carrega todas as Vistas
+			_views = new Dictionary<FaceView, View>();
             _views[FaceView.Mural] = new Mural();
             _views[FaceView.Mural].LoadContent(this.Content);
 
@@ -41,46 +44,10 @@ namespace coltecube.Scenes
             _views[FaceView.Teto].LoadContent(this.Content);
             
             // Define a Vista Inicial
-            _currentViewKey = FaceView.Escada;
+            _currentViewKey = FaceView.Mural;
             _activeView = _views[_currentViewKey];
 
-            //  Carrega as Setas 
-            var arrowTex = Content.Load<Texture2D>("UI/ArrowDown");
-            float arrowScale = 0.015f;
-            
-            // Esquerda
-			int paddingX = 80;
-			int paddingY = 80;
-            _arrowLeft = new RotatableObject(arrowTex, new Vector2(0+paddingX,  _activeView._background.Height/2*_activeView._backgroundScale), arrowScale);
-            _arrowLeft.Rotation = MathHelper.ToRadians(90f);
-            _arrowLeft.OnClick += () => RotateView(false); 
-
-            // Direita
-            _arrowRight = new RotatableObject(arrowTex, new Vector2((_activeView._background.Width-Game1.ESPACO_LATERAL_ITEMS)*_activeView._backgroundScale,  _activeView._background.Height/2*_activeView._backgroundScale), arrowScale);
-            _arrowRight.Rotation = MathHelper.ToRadians(-90f);
-            _arrowRight.OnClick += () => RotateView(true); 
-
-            // Cima
-            _arrowUp = new RotatableObject(arrowTex, new Vector2((_activeView._background.Width/2)*_activeView._backgroundScale, paddingY), arrowScale);
-            _arrowUp.Rotation = MathHelper.ToRadians(180f);
-            _arrowUp.OnClick += () => 
-            {
-                _lastWallView = _currentViewKey;
-                StartViewChange(FaceView.Teto);
-            };
-
-            // Baixo
-            _arrowDown = new RotatableObject(arrowTex, new Vector2(500, 400), arrowScale);
-            _arrowDown.Rotation = MathHelper.ToRadians(0f); // Rotação original
-            _arrowDown.OnClick += () => 
-            {
-                StartViewChange(_lastWallView); 
-            };
-
-            _arrowDown.IsVisible = false;
-            _arrowUp.IsVisible = true;
-            _arrowLeft.IsVisible = true;
-            _arrowRight.IsVisible = true;
+            DefineArrows();
         }
     }
 }

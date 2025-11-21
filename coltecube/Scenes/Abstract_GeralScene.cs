@@ -10,11 +10,10 @@ using coltecube.Scenes.Hall;
 namespace coltecube.Scenes
 {
     // Enum para as vistas
+	public enum FaceView { Escada, Quadra, Cantina, Escaninhos, BanhoDeSol, Teto, // hall 0 > 6 (6)
+	Mural, LabAmarelo, Elevador, LabVerde} // corredor info 6 > 5 (11)
 	
-    public enum FaceView { Escada, Quadra, Cantina, Escaninhos, BanhoDeSol, Teto // hall
-	, LabAmarelo, LabVerde, Elevador, Mural // corredor info
-	}
-    public abstract class GeralScene : Scene
+    public class GeralScene : Scene
     {
         // Variáveis de Gerenciamento 
         protected Dictionary<FaceView, View> _views = new Dictionary<FaceView, View>();
@@ -31,26 +30,72 @@ namespace coltecube.Scenes
         protected RotatableObject _arrowRight;
         protected RotatableObject _arrowUp;
         protected RotatableObject _arrowDown;
+		protected int totalWalls = 4; // número de paredes (sem teto)
+		protected int indiceFaceView = 0;
 
         public override void LoadContent()
         {
             // edit on the class
         }
 
+		public void DefineArrows(){
+			//  Carrega as Setas 
+            var arrowTex = Content.Load<Texture2D>("UI/ArrowDown");
+            float arrowScale = 0.015f;
+			// Esquerda
+			int paddingX = 80;
+			int paddingY = 80;
+			// relativo ao centro do background
+            _arrowLeft = new RotatableObject(arrowTex, new Vector2(paddingX-_activeView._background.Width/2*_activeView._backgroundScale, 0), arrowScale);
+            _arrowLeft.Rotation = MathHelper.ToRadians(90f);
+            _arrowLeft.OnClick += () => RotateView(false); 
+			_arrowLeft.name = "left";
+
+            // Direita
+            _arrowRight = new RotatableObject(arrowTex, new Vector2(-paddingX+_activeView._background.Width/2*_activeView._backgroundScale, 0), arrowScale);
+            _arrowRight.Rotation = MathHelper.ToRadians(-90f);
+            _arrowRight.OnClick += () => RotateView(true); 
+
+            // Cima
+            _arrowUp = new RotatableObject(arrowTex, new Vector2(0,-_activeView._background.Height/2*_activeView._backgroundScale+paddingY), arrowScale);
+            _arrowUp.Rotation = MathHelper.ToRadians(180f);
+            _arrowUp.OnClick += () => 
+            {
+                _lastWallView = _currentViewKey;
+                StartViewChange(FaceView.Teto);
+            };
+
+            // Baixo
+            _arrowDown = new RotatableObject(arrowTex, new Vector2(500, 400), arrowScale);
+            _arrowDown.Rotation = MathHelper.ToRadians(0f); // Rotação original
+            _arrowDown.OnClick += () => 
+            {
+                StartViewChange(_lastWallView); 
+            };
+
+            _arrowDown.IsVisible = false;
+            _arrowUp.IsVisible = true;
+            _arrowLeft.IsVisible = true;
+            _arrowRight.IsVisible = true;
+			Console.WriteLine("arrow");
+		}
+
         // Mudou de vista
         protected void StartViewChange(FaceView nextView)
         {
+			Console.WriteLine("chn");
             if (_viewTransition.IsTransitioning) return; 
 
             _nextViewKey = nextView;
-            _viewTransition.Start(); 
+            _viewTransition.Start();
+			
         }
 
         // Logica de ver as setas
         protected void SwapViewLogic()
         {
             _currentViewKey = _nextViewKey;
-            _activeView = _views[_currentViewKey];
+            _activeView = _views[_currentViewKey+indiceFaceView];
 
             if (_currentViewKey == FaceView.Teto)
             {
@@ -74,9 +119,9 @@ namespace coltecube.Scenes
         protected void RotateView(bool toRight)
         {
             if (_currentViewKey == FaceView.Teto) return;
+			Console.WriteLine("rotating");
 
             int currentIndex = (int)_currentViewKey;
-            int totalWalls = 5; 
 
             if (toRight)
             {

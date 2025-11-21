@@ -13,7 +13,7 @@ public class LabAmarelo : View
 
     public override void LoadContent(ContentManager content)
     {
-        _background = content.Load<Texture2D>("Backgrounds/Lab-amarelo-TI/background.png");
+        _background = content.Load<Texture2D>("Backgrounds/Lab-amarelo-TI/background");
 		// _
            
         /*var cadeadoTexture = content.Load<Texture2D>("Objects/Cadeado");

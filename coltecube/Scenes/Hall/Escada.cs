@@ -19,6 +19,15 @@ namespace coltecube.Scenes.Hall;
                 -_background.Width/2*_backgroundScale,-_background.Height/2*_backgroundScale               
             ), _backgroundScale);
 
-			_objects.Add(escada);			
+			_objects.Add(escada);
+			escada.name = "escada";
+
+			//
+			escada.Bounds = new Rectangle(
+				(int)(escada.Bounds.X),
+				(int)(escada.Bounds.Y),
+				(int)(300),
+				(int)(300)
+			);		
         }
     }
