@@ -13,7 +13,7 @@ public class Cantina : View
 
     public override void LoadContent(ContentManager content)
     {
-        _background = content.Load<Texture2D>("Backgrounds/Hall_Cantina");
+        _background = content.Load<Texture2D>("Backgrounds/Cantina/background");
         // _backgroundScale = 0.32f;
            
         /*var ampulhetaTexture = content.Load<Texture2D>("Objects/Ampulheta");

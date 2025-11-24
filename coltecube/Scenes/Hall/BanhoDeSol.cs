@@ -13,7 +13,7 @@ public class BanhoDeSol : View
 
     public override void LoadContent(ContentManager content)
     {
-        _background = content.Load<Texture2D>("Backgrounds/Hall_BanhoDeSol");
+        _background = content.Load<Texture2D>("Backgrounds/BanhoDeSol/background");
         // _backgroundScale = 0.32f;
            
         /*var cadeadoTexture = content.Load<Texture2D>("Objects/Cadeado");

@@ -4,23 +4,11 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/EntradaColtec.jpg</File>
-    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Hall_BanhoDeSol.png</File>
-    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Hall_Cantina.png</File>
-    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Hall_Escada.png</File>
-    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Hall_Escaninhos.png</File>
-    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Backgrounds/Hall_Quadra.png</File>
     <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Fonts/File.spritefont</File>
     <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/UI/ArrowDown.png</File>
     <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/UI/Button.png</File>
   </SourceFiles>
   <DestFiles>
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

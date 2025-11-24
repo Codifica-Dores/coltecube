@@ -1,1 +1,4 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Fonts/File.spritefont","C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/bin/DesktopGL/Content_def/Fonts/File.xnb","FontDescriptionProcessor","SpriteFontContent",2068,21529,0,2409825
+"C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/UI/ArrowDown.png","C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/bin/DesktopGL/Content_def/UI/ArrowDown.xnb","TextureProcessor","Texture2DContent",48168,16078873,0,3664303
+"C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/UI/Button.png","C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/bin/DesktopGL/Content_def/UI/Button.xnb","TextureProcessor","Texture2DContent",6042,1048661,0,0371876

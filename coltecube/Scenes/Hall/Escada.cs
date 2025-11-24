@@ -14,7 +14,7 @@ namespace coltecube.Scenes.Hall;
 
         public override void LoadContent(ContentManager content)
         {
-            _background = content.Load<Texture2D>("Backgrounds/Hall_Escada");
+            _background = content.Load<Texture2D>("Backgrounds/Escada/background");
 			escada = new InteractiveObject(content.Load<Texture2D>("Backgrounds/Escada/escada"), new Vector2(
                 0,0               
             ), _backgroundScale);

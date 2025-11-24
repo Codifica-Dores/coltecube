@@ -13,7 +13,7 @@ public class Escaninhos : View
 
     public override void LoadContent(ContentManager content)
     {
-        _background = content.Load<Texture2D>("Backgrounds/Hall_Escaninhos");
+        _background = content.Load<Texture2D>("Backgrounds/corredor_hall");
         // _backgroundScale = 0.32f;
            
         /*var cadeadoTexture = content.Load<Texture2D>("Objects/Cadeado");

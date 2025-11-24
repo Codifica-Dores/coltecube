@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("coltecube")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+46574a9f62d6ce0eccdc40bcaf53f7bb778e1116")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab4186f55e0f357b2c9951956b30d3a5b529fe94")]
 [assembly: System.Reflection.AssemblyProductAttribute("coltecube")]
 [assembly: System.Reflection.AssemblyTitleAttribute("coltecube")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

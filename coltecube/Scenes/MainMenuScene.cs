@@ -15,7 +15,7 @@ namespace coltecube.Scenes
         public override void LoadContent()
         {
             // Files
-            _background = Content.Load<Texture2D>("Backgrounds/EntradaColtec");
+            _background = Content.Load<Texture2D>("Sprites/Backgrounds/entrada_coltec");
             var buttonTexture = Content.Load<Texture2D>("UI/Button");
             _menuFont = Content.Load<SpriteFont>("Fonts/File");
 

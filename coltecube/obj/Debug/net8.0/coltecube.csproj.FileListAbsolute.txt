@@ -57,7 +57,6 @@ C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Deb
 C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Hall_Escada.xnb
 C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Hall_Escaninhos.xnb
 C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Hall_Quadra.xnb
-C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Fonts\File.xnb
 C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\coltecube.exe
 C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\coltecube.deps.json
 C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\coltecube.runtimeconfig.json
@@ -242,3 +241,5 @@ C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Deb
 C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Util\Numeros\7.xnb
 C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Util\Numeros\8.xnb
 C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Util\Numeros\9.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Sprites\Backgrounds\entrada_coltec.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Fonts\File.xnb
