@@ -14,20 +14,14 @@ namespace coltecube.Scenes.Hall;
 
         public override void LoadContent(ContentManager content)
         {
+	        // Background
             _background = content.Load<Texture2D>("Backgrounds/Hall_Escada");
+            
+            // Escada
 			escada = new InteractiveObject(content.Load<Texture2D>("Backgrounds/Escada/escada"), new Vector2(
                 0,0               
             ), _backgroundScale);
-
 			_objects.Add(escada);
 			escada.name = "escada";
-
-			//
-			escada.Bounds = new Rectangle(
-				(int)(_background.Width/2*_backgroundScale),
-				(int)(_background.Height/2*_backgroundScale),
-				(int)(300),
-				(int)(300)
-			);
 		}
     }

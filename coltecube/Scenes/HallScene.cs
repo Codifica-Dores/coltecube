@@ -51,8 +51,6 @@ namespace coltecube.Scenes
             // Define a Vista Inicial
             _currentViewKey = 0; // sempre 0
             _activeView = _views[_currentViewKey+indiceFaceView];
-
-            
             
             DefineArrows();
         }
