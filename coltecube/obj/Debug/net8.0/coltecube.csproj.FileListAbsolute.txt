@@ -181,3 +181,64 @@ C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Deb
 C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Util\digital.xnb
 C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Util\digital_desbloqueada.xnb
 C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Util\digital_trancada.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\313\comunismo.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\adesivo.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Calendario (1999).xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Calendario (2025).xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Cantina\gelo.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Cantina\poça-de-dagua-do-gelo-na-panela.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\cenariosQuadra\ferro.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\cenariosQuadra\quadra(pessoa-com-ferro).xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\cenariosQuadra\quadra(visaoGeral).xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\cenariosQuadra\qudra(pessoa-sem-ferro).xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\chaveQuadra.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\corredor_hall.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Elevador-sala\elevador(aberto).xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Escada-elevador\elevador(aberto).xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\gelao.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\LabAmarelo\arcondicionado(desligado).xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\LabAmarelo\arcondicionado(ligado).xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\LabAmarelo\armario(congelado).xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\LabAmarelo\dedo.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\LabAmarelo\gelao(com-pessoa).xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\LabAmarelo\gelao.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\LabAmarelo\gelinho(dedo).xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Onibus\background.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Onibus\chaveEncaixada.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Onibus\engrenagem.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Onibus\espelho-com-reflexo.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Onibus\espelho.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Onibus\motor.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Onibus\negocioDaChave.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Onibus\visaoGeral.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Puzzles\coisa-eletrica\alavanca(acionada).xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Puzzles\coisa-eletrica\alavanca(nao acionada).xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Puzzles\coisa-eletrica\background.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Puzzles\coisa-eletrica\barra-slider.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Puzzles\coisa-eletrica\bolinha-slider.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Puzzles\coisa-eletrica\caixa-de-numero.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Puzzles\coisa-eletrica\Visao Geral.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Puzzles\pc-lab-vermelho\circuito-tela.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Puzzles\protoboard\background.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Puzzles\protoboard\fio.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Puzzles\protoboard\VisaoGeral(assim vai começar o puzzle.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Puzzles\protoboard\VisaoGeral(assim vai deligar a energia).xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\quadradinho.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\SalaMetal\26 Sem Título_20251117204524.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\SalaMetal\mesa.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\SalaOswaldo(parteInterna)\background.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\SalaOswaldo(parteInterna)\chaveEncaixada.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\SalaOswaldo(parteInterna)\chaveNaMesa.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\SalaOswaldo(parteInterna)\chaveOnibus.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\teto.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Util\flitro-antigo.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Util\Numeros\0.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Util\Numeros\1.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Util\Numeros\2.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Util\Numeros\3.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Util\Numeros\4.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Util\Numeros\5.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Util\Numeros\6.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Util\Numeros\7.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Util\Numeros\8.xnb
+C:\Users\samug\OneDrive\Documentos\Scripts\ScriptsCs\coltecube\coltecube\bin\Debug\net8.0\Content\Backgrounds\Util\Numeros\9.xnb
