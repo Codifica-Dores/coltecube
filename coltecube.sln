@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36301.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "coltecube", "coltecube\coltecube.csproj", "{7F1D0BCE-F1A9-4982-A3F7-632FA62268B1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{136C3C93-6D14-C06D-3DBE-468E75475147} = {136C3C93-6D14-C06D-3DBE-468E75475147}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGameLibrary", "MonoGameLibrary\MonoGameLibrary.csproj", "{136C3C93-6D14-C06D-3DBE-468E75475147}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F1D0BCE-F1A9-4982-A3F7-632FA62268B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F1D0BCE-F1A9-4982-A3F7-632FA62268B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F1D0BCE-F1A9-4982-A3F7-632FA62268B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F1D0BCE-F1A9-4982-A3F7-632FA62268B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{136C3C93-6D14-C06D-3DBE-468E75475147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{136C3C93-6D14-C06D-3DBE-468E75475147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{136C3C93-6D14-C06D-3DBE-468E75475147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{136C3C93-6D14-C06D-3DBE-468E75475147}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C1FF8FF-C232-457D-A513-E1A499D5DC8A}
+	EndGlobalSection
+EndGlobal

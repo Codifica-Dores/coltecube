@@ -1,0 +1,189 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Giovana\\Downloads\\coltecube\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{136C3C93-6D14-C06D-3DBE-468E75475147}|MonoGameLibrary\\MonoGameLibrary.csproj|c:\\users\\giovana\\downloads\\coltecube\\monogamelibrary\\monogamelibrary.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{136C3C93-6D14-C06D-3DBE-468E75475147}|MonoGameLibrary\\MonoGameLibrary.csproj|solutionrelative:monogamelibrary\\monogamelibrary.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F1D0BCE-F1A9-4982-A3F7-632FA62268B1}|coltecube\\coltecube.csproj|c:\\users\\giovana\\downloads\\coltecube\\coltecube\\scenes\\inicioscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F1D0BCE-F1A9-4982-A3F7-632FA62268B1}|coltecube\\coltecube.csproj|solutionrelative:coltecube\\scenes\\inicioscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F1D0BCE-F1A9-4982-A3F7-632FA62268B1}|coltecube\\coltecube.csproj|c:\\users\\giovana\\downloads\\coltecube\\coltecube\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F1D0BCE-F1A9-4982-A3F7-632FA62268B1}|coltecube\\coltecube.csproj|solutionrelative:coltecube\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F1D0BCE-F1A9-4982-A3F7-632FA62268B1}|coltecube\\coltecube.csproj|c:\\users\\giovana\\downloads\\coltecube\\coltecube\\coltecube.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7F1D0BCE-F1A9-4982-A3F7-632FA62268B1}|coltecube\\coltecube.csproj|solutionrelative:coltecube\\coltecube.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{136C3C93-6D14-C06D-3DBE-468E75475147}|MonoGameLibrary\\MonoGameLibrary.csproj|c:\\users\\giovana\\downloads\\coltecube\\monogamelibrary\\core.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{136C3C93-6D14-C06D-3DBE-468E75475147}|MonoGameLibrary\\MonoGameLibrary.csproj|solutionrelative:monogamelibrary\\core.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{136C3C93-6D14-C06D-3DBE-468E75475147}|MonoGameLibrary\\MonoGameLibrary.csproj|c:\\users\\giovana\\downloads\\coltecube\\monogamelibrary\\scenes\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{136C3C93-6D14-C06D-3DBE-468E75475147}|MonoGameLibrary\\MonoGameLibrary.csproj|solutionrelative:monogamelibrary\\scenes\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F1D0BCE-F1A9-4982-A3F7-632FA62268B1}|coltecube\\coltecube.csproj|c:\\users\\giovana\\downloads\\coltecube\\coltecube\\coltecubegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F1D0BCE-F1A9-4982-A3F7-632FA62268B1}|coltecube\\coltecube.csproj|solutionrelative:coltecube\\coltecubegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F1D0BCE-F1A9-4982-A3F7-632FA62268B1}|coltecube\\coltecube.csproj|c:\\users\\giovana\\downloads\\coltecube\\coltecube\\app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{7F1D0BCE-F1A9-4982-A3F7-632FA62268B1}|coltecube\\coltecube.csproj|solutionrelative:coltecube\\app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F1D0BCE-F1A9-4982-A3F7-632FA62268B1}|coltecube\\coltecube.csproj|c:\\users\\giovana\\downloads\\coltecube\\coltecube\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F1D0BCE-F1A9-4982-A3F7-632FA62268B1}|coltecube\\coltecube.csproj|solutionrelative:coltecube\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F1D0BCE-F1A9-4982-A3F7-632FA62268B1}|coltecube\\coltecube.csproj|c:\\users\\giovana\\downloads\\coltecube\\coltecube\\icon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{7F1D0BCE-F1A9-4982-A3F7-632FA62268B1}|coltecube\\coltecube.csproj|solutionrelative:coltecube\\icon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InicioScene.cs",
+              "DocumentMoniker": "C:\\Users\\Giovana\\Downloads\\coltecube\\coltecube\\Scenes\\InicioScene.cs",
+              "RelativeDocumentMoniker": "coltecube\\Scenes\\InicioScene.cs",
+              "ToolTip": "C:\\Users\\Giovana\\Downloads\\coltecube\\coltecube\\Scenes\\InicioScene.cs",
+              "RelativeToolTip": "coltecube\\Scenes\\InicioScene.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T23:41:55.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "app.manifest",
+              "DocumentMoniker": "C:\\Users\\Giovana\\Downloads\\coltecube\\coltecube\\app.manifest",
+              "RelativeDocumentMoniker": "coltecube\\app.manifest",
+              "ToolTip": "C:\\Users\\Giovana\\Downloads\\coltecube\\coltecube\\app.manifest",
+              "RelativeToolTip": "coltecube\\app.manifest",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001203|",
+              "WhenOpened": "2025-11-17T23:40:30.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "coltecube",
+              "DocumentMoniker": "C:\\Users\\Giovana\\Downloads\\coltecube\\coltecube\\coltecube.csproj",
+              "RelativeDocumentMoniker": "coltecube\\coltecube.csproj",
+              "ToolTip": "C:\\Users\\Giovana\\Downloads\\coltecube\\coltecube\\coltecube.csproj",
+              "RelativeToolTip": "coltecube\\coltecube.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-17T23:31:00.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ColtecubeGame.cs",
+              "DocumentMoniker": "C:\\Users\\Giovana\\Downloads\\coltecube\\coltecube\\ColtecubeGame.cs",
+              "RelativeDocumentMoniker": "coltecube\\ColtecubeGame.cs",
+              "ToolTip": "C:\\Users\\Giovana\\Downloads\\coltecube\\coltecube\\ColtecubeGame.cs",
+              "RelativeToolTip": "coltecube\\ColtecubeGame.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T23:31:19.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Game1.cs",
+              "DocumentMoniker": "C:\\Users\\Giovana\\Downloads\\coltecube\\coltecube\\Game1.cs",
+              "RelativeDocumentMoniker": "coltecube\\Game1.cs",
+              "ToolTip": "C:\\Users\\Giovana\\Downloads\\coltecube\\coltecube\\Game1.cs",
+              "RelativeToolTip": "coltecube\\Game1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T23:24:31.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MonoGameLibrary",
+              "DocumentMoniker": "C:\\Users\\Giovana\\Downloads\\coltecube\\MonoGameLibrary\\MonoGameLibrary.csproj",
+              "RelativeDocumentMoniker": "MonoGameLibrary\\MonoGameLibrary.csproj",
+              "ToolTip": "C:\\Users\\Giovana\\Downloads\\coltecube\\MonoGameLibrary\\MonoGameLibrary.csproj",
+              "RelativeToolTip": "MonoGameLibrary\\MonoGameLibrary.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-17T23:34:36.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Core.cs",
+              "DocumentMoniker": "C:\\Users\\Giovana\\Downloads\\coltecube\\MonoGameLibrary\\Core.cs",
+              "RelativeDocumentMoniker": "MonoGameLibrary\\Core.cs",
+              "ToolTip": "C:\\Users\\Giovana\\Downloads\\coltecube\\MonoGameLibrary\\Core.cs",
+              "RelativeToolTip": "MonoGameLibrary\\Core.cs",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAUwJwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T00:59:11.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Giovana\\Downloads\\coltecube\\coltecube\\Program.cs",
+              "RelativeDocumentMoniker": "coltecube\\Program.cs",
+              "ToolTip": "C:\\Users\\Giovana\\Downloads\\coltecube\\coltecube\\Program.cs",
+              "RelativeToolTip": "coltecube\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T22:55:41.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Scene.cs",
+              "DocumentMoniker": "C:\\Users\\Giovana\\Downloads\\coltecube\\MonoGameLibrary\\Scenes\\Scene.cs",
+              "RelativeDocumentMoniker": "MonoGameLibrary\\Scenes\\Scene.cs",
+              "ToolTip": "C:\\Users\\Giovana\\Downloads\\coltecube\\MonoGameLibrary\\Scenes\\Scene.cs",
+              "RelativeToolTip": "MonoGameLibrary\\Scenes\\Scene.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAApwC4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T23:21:36.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Icon.ico - Icon [256x256, 32 bits, PNG]",
+              "DocumentMoniker": "C:\\Users\\Giovana\\Downloads\\coltecube\\coltecube\\Icon.ico",
+              "RelativeDocumentMoniker": "coltecube\\Icon.ico",
+              "ToolTip": "C:\\Users\\Giovana\\Downloads\\coltecube\\coltecube\\Icon.ico - Icon [256x256, 32 bits, PNG]",
+              "RelativeToolTip": "coltecube\\Icon.ico - Icon [256x256, 32 bits, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001525|",
+              "WhenOpened": "2025-11-17T22:56:28.374Z",
+              "EditorCaption": " - Icon [256x256, 32 bits, PNG]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
