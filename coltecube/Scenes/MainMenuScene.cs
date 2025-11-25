@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using MonoGameLibrary;          
 using MonoGameLibrary.Scenes;   
 using coltecube.UI;          
+using System.Collections.Generic;
 
 namespace coltecube.Scenes
 {
@@ -15,7 +16,7 @@ namespace coltecube.Scenes
         public override void LoadContent()
         {
             // Files
-            _background = Content.Load<Texture2D>("Backgrounds/teto");
+            _background = Content.Load<Texture2D>("Sprites/Backgrounds/entrada_coltec");
             var buttonTexture = Content.Load<Texture2D>("UI/Button");
             _menuFont = Content.Load<SpriteFont>("Fonts/File");
 
@@ -41,6 +42,7 @@ namespace coltecube.Scenes
             {
                 Core.ChangeScene(new HallScene());
             };
+			
         }
 
         public override void Update(GameTime gameTime)

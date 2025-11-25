@@ -150,9 +150,8 @@ namespace coltecube.Scenes
             _arrowRight.Update(gameTime, Core.Input.Mouse);
 			_arrowUp.Update(gameTime, Core.Input.Mouse);
 			_arrowDown.Update(gameTime, Core.Input.Mouse);
-
+			
             _activeView.Update(gameTime, Core.Input.Mouse);
-
             base.Update(gameTime);
         }
 
@@ -167,7 +166,14 @@ namespace coltecube.Scenes
 			_arrowDown.Draw(Core.SpriteBatch);
             _viewTransition.Draw(Core.SpriteBatch, Core.GraphicsDevice.Viewport);
 
+			Game1.inventory.Draw(Core.SpriteBatch);
+
             base.Draw(gameTime);
         }
+
+		private void Items()
+		{
+			
+		}
     }
 }

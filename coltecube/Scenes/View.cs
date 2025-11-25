@@ -50,5 +50,4 @@ public abstract class View
         }
 		View.center = center;
     }
-	public void addFunc(string name, Action action){}
 }

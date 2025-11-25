@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 using coltecube.Objects;
 using coltecube.Systems; 
+using System.Collections.Generic;
 using System;
 
 namespace coltecube;
@@ -19,6 +20,7 @@ public class Game1 : Core
 
 	public static Texture2D Pixelw;
 	public static bool showLocals = false;
+	public static Inventory inventory = null;
 
     // Construtor
     public Game1()
@@ -37,6 +39,11 @@ public class Game1 : Core
     	Pixelw.SetData(new[] { Color.White });
 
         Core.ChangeScene(new MainMenuScene()); // mudar aqui > MainMenuScene()
+		
+		inventory = new Inventory(Content.Load<Texture2D>("Backgrounds/quadradinho"),
+		new Vector2((Game1.NATIVE_WIDTH+Game1.ESPACO_LATERAL_ITEMS)/2,Game1.NATIVE_HEIGHT/2),
+		0.05f);
+		inventory.Charge();
     }
 
     protected override void Update(GameTime gameTime)
