@@ -16,7 +16,7 @@ using System.Reflection;
 <<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a7f2bce5e73e742a2dae912b42774b73637a744")]
 =======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+776ec5ebf8de4526c208ee0dd012b60aff93aaca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd6cb5834d83eb4f39343d3ec362d8dcc79ffa0a")]
 >>>>>>> fd6cb5834d83eb4f39343d3ec362d8dcc79ffa0a
 [assembly: System.Reflection.AssemblyProductAttribute("MonoGameLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MonoGameLibrary")]
