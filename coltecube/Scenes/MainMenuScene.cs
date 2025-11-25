@@ -12,6 +12,7 @@ namespace coltecube.Scenes
         private Texture2D _background;
         private SpriteFont _menuFont;
         private UIButton _playButton;
+        private float _backgroundScale = 0.75f;
         
         public override void LoadContent()
         {
@@ -20,14 +21,16 @@ namespace coltecube.Scenes
             var buttonTexture = Content.Load<Texture2D>("UI/Button");
             _menuFont = Content.Load<SpriteFont>("Fonts/File");
 
+            
+
             // Botão
-            float buttonScale = 0.25f;
+            float buttonScale = 0.5f;
             int buttonWidth = (int)(buttonTexture.Width * buttonScale);
             int buttonHeight = (int)(buttonTexture.Height * buttonScale);
 
             Vector2 buttonPosition = new Vector2(
                 (Core.Graphics.PreferredBackBufferWidth - buttonWidth) / 2,
-                (Core.Graphics.PreferredBackBufferHeight - buttonHeight) / 2
+                ((Core.Graphics.PreferredBackBufferHeight - buttonHeight) / 2) + 250f
             );
 
             _playButton = new UIButton(
@@ -57,12 +60,19 @@ namespace coltecube.Scenes
             int screenWidth = Core.GraphicsDevice.Viewport.Width;
             int screenHeight = Core.GraphicsDevice.Viewport.Height;
             
-            int x = (screenWidth - _background.Width) / 2;
+            int x = ((screenWidth - _background.Width) / 2) + _background.Width/2;
             int y = (screenHeight - _background.Height) / 2;
 
             Vector2 backgroundPosition = new Vector2(x, y);
 
-            Core.SpriteBatch.Draw(_background, backgroundPosition, Color.White);
+            Core.SpriteBatch.Draw(
+                _background,
+                backgroundPosition,
+                null, Color.White, 0f,
+                new Vector2(x, 0f),
+                _backgroundScale,
+                SpriteEffects.None, 0f
+            );
 
             _playButton.Draw(Core.SpriteBatch);
 

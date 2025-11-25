@@ -33,19 +33,5 @@ public class UIButton : GameObject
     public override void Draw(SpriteBatch spriteBatch)
     {
         base.Draw(spriteBatch);
-
-        if (_font != null && !string.IsNullOrEmpty(Text))
-        {
-            Vector2 textSize = _font.MeasureString(Text);
-            
-            Rectangle buttonBounds = this.Bounds;
-
-            Vector2 textPosition = new Vector2(
-                (int)(buttonBounds.X + (buttonBounds.Width - textSize.X) / 2),
-                (int)(buttonBounds.Y + (buttonBounds.Height - textSize.Y) / 2)
-            );
-
-            spriteBatch.DrawString(_font, Text, textPosition, Color.Black);
-        }
     }
 }
