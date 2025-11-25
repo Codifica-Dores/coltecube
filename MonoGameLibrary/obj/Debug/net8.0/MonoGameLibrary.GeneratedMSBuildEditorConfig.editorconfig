@@ -8,6 +8,10 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MonoGameLibrary
+<<<<<<< HEAD
 build_property.ProjectDir = /home/a2023951482/Documentos/coltecube/MonoGameLibrary/
+=======
+build_property.ProjectDir = /home/julia/Área de trabalho/codificadores/coltecube/MonoGameLibrary/
+>>>>>>> fd6cb5834d83eb4f39343d3ec362d8dcc79ffa0a
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

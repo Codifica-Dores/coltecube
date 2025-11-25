@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "/home/a2023951482/Documentos/coltecube/MonoGameLibrary/MonoGameLibrary.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/a2023951482/.nuget/NuGet/NuGet.Config"
+=======
+    "/home/julia/Área de trabalho/codificadores/coltecube/MonoGameLibrary/MonoGameLibrary.csproj": {}
+  },
+  "projects": {
+    "/home/julia/Área de trabalho/codificadores/coltecube/MonoGameLibrary/MonoGameLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/julia/Área de trabalho/codificadores/coltecube/MonoGameLibrary/MonoGameLibrary.csproj",
+        "projectName": "MonoGameLibrary",
+        "projectPath": "/home/julia/Área de trabalho/codificadores/coltecube/MonoGameLibrary/MonoGameLibrary.csproj",
+        "packagesPath": "/home/julia/.nuget/packages/",
+        "outputPath": "/home/julia/Área de trabalho/codificadores/coltecube/MonoGameLibrary/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/julia/.nuget/NuGet/NuGet.Config"
+>>>>>>> fd6cb5834d83eb4f39343d3ec362d8dcc79ffa0a
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,11 +49,14 @@
           "warnAsError": [
             "NU1605"
           ]
+<<<<<<< HEAD
         },
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
+=======
+>>>>>>> fd6cb5834d83eb4f39343d3ec362d8dcc79ffa0a
         }
       },
       "frameworks": {
@@ -65,7 +85,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/256/sdk/8.0.407/PortableRuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
+>>>>>>> fd6cb5834d83eb4f39343d3ec362d8dcc79ffa0a
         }
       }
     }

@@ -1,6 +1,6 @@
 ﻿## Ignorar pastas de Build (Essenciais)
-[Bb]in/
-[Oo]bj/
+**[Bb]in/
+**[Oo]bj/
 
 ## Ignorar arquivos do Rider e Visual Studio
 .idea/
@@ -8,6 +8,10 @@
 *.user
 *.suo
 *.userprefs
+
+# Conteúdos cache do MonoGame
+**/*.mgcontent
+**/*.mgstats
 
 ## Ignorar arquivos de sistema
 .DS_Store
