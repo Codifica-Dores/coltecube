@@ -13,7 +13,7 @@ public class Teto : View
 
     public override void LoadContent(ContentManager content)
     {
-        _background = content.Load<Texture2D>("Backgrounds/vinheta");
+        _background = content.Load<Texture2D>("Backgrounds/teto");
         // _backgroundScale = 0.32f;
            
         /*var cadeadoTexture = content.Load<Texture2D>("Objects/Cadeado");

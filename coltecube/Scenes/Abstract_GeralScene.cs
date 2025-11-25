@@ -19,11 +19,14 @@ namespace coltecube.Scenes
         BanhoDeSol,
         Teto, // hall 0 > 6 (6)
         Mural,
-        LabAmarelo,
+        LabAmareloTI,
         Elevador,
-        LabVerde, // corredor info 6 > 5 (11)
+        LabVerdeVermelho, // corredor info 6 > 5 (11)
         ElevadorSala, // terceiro andar > 10
-        Sala313 // sala 313 > 11
+        Sala313, // sala 313 > 11
+        LabAmarelo, // 12
+        LabVermelho, //13
+        LabVerde //14
     }
 
     public class GeralScene : Scene

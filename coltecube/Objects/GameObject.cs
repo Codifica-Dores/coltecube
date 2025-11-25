@@ -17,32 +17,39 @@ public class GameObject
 	public Vector2 Position 
 	{ 
 		get { return _position; } 
-		set 
-		{ 
-			_position = value; 
-			UpdateBounds(); 
-		} 
+		set { _position = value; UpdateBounds(); } 
 	}
 
 	public float Scale 
 	{ 
 		get { return _scale; } 
-		set 
-		{ 
-			_scale = value; 
-			UpdateBounds(); 
-		} 
+		set { _scale = value; UpdateBounds(); } 
 	}
 
 	public bool IsVisible { get; set; } = true;
-	
 	public Rectangle Bounds;
-	
 	public string name;
 
-	// Método auxiliar para recalcular o retângulo
+	public GameObject(Texture2D texture, Vector2 position, float scale = 1.0f)
+	{
+		Texture = texture;
+		_scale = scale; 
+		_position = position; 
+		name = "-Sem Nome-";
+        
+        // [MODIFICAÇÃO] Só tenta ler pixels se tiver textura
+		if (Texture != null)
+		{
+		    PixelData = new Color[texture.Width * texture.Height];
+		    texture.GetData(PixelData);
+		}
+
+		UpdateBounds(); 
+	}
+
 	private void UpdateBounds()
 	{
+        // [MODIFICAÇÃO] Só calcula tamanho automático se tiver textura
 		if (Texture != null)
 		{
 			Bounds = new Rectangle(
@@ -53,82 +60,33 @@ public class GameObject
 			);
 		}
 	}
-
-	// Construtor
-	public GameObject(Texture2D texture, Vector2 position, float scale = 1.0f)
-	{
-		Texture = texture;
-		_scale = scale; 
-		_position = position; 
-        
-		name = "-Sem Nome-";
-        
-		PixelData = new Color[texture.Width * texture.Height];
-		texture.GetData(PixelData);
-
-		UpdateBounds(); 
-	}
     
-    //Mouse
-    public bool IsMouseOver(MouseInfo mouse) 
+    public virtual bool IsMouseOver(MouseInfo mouse) 
     { 
-	    // Verifica se o mouse está dentro do retângulo bruto
 	    if (!IsVisible || !Bounds.Contains(new Point(mouse.Position.X, mouse.Position.Y))) return false;
 	    
+        // [MODIFICAÇÃO] Se não tem textura (zona invisível), mas está no Bounds, colidiu!
+        if (Texture == null) return true;
+
+        // Se tem textura, faz a checagem detalhada
 	    int localX = (int)((mouse.Position.X - Position.X) / Scale);
 	    int localY = (int)((mouse.Position.Y - Position.Y) / Scale);
 
 	    if (localX < 0 || localX >= Texture.Width || localY < 0 || localY >= Texture.Height) return false;
 
-	    // Pega o pixel
 	    Color pixelColor = PixelData[localY * Texture.Width + localX];
-
 	    return pixelColor.A > 10; 
     }
     
-    
     public bool IsClicked(MouseInfo mouse) { return IsMouseOver(mouse) && mouse.WasButtonJustPressed(MouseButton.Left); }
 
-    
     public virtual void Update(GameTime gameTime, MouseInfo mouse) { }
 
     public virtual void Draw(SpriteBatch spriteBatch)
     {
         if (IsVisible && Texture != null)
         {
-			// Console.WriteLine("Desenhando objeto em " + Position + " ... " +Texture.Width + "-" +Texture.Height);
-			
-            spriteBatch.Draw(
-                Texture,
-                Position,     // Posição (top-left)
-                null,         // sourceRect (textura inteira)
-                Color.White,
-                0f,           // Rotação (nenhuma)
-                Vector2.Zero, // Origem (top-left)
-                Scale,        // Escala proporcional!
-                SpriteEffects.None,
-                0f
-            );
+            spriteBatch.Draw(Texture, Position, null, Color.White, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
         }			
     }
-	// public virtual void Draw(SpriteBatch spriteBatch)
-    // {
-    //     if (IsVisible && Texture != null)
-    //     {
-	// 		// Console.WriteLine("Desenhando objeto em " + Position + " ... " +Texture.Width + "-" +Texture.Height);
-	// 		// Bounds.X+=screenCenter.X;
-	// 		// Bounds.Y+=screenCenter.Y;
-    //         spriteBatch.Draw(
-    //             Texture,
-    //             Position,     // Posição (top-left)
-    //             null,         // sourceRect (textura inteira)
-    //             Color.White,
-    //             0f,           // Rotação (nenhuma)
-    //             Vector2.Zero, // Origem (top-left)
-    //             Scale,        // Escala proporcional!
-    //             SpriteEffects.None,
-    //             0f
-    //         );
-    //     }			
-    // }	
 }

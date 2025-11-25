@@ -13,116 +13,6 @@
 
 #---------------------------------- Content ---------------------------------#
 
-# COLE AS PARADAS DAQUI PRA BAIXO
-
-#begin ./Backgrounds\adesivo.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:./Backgrounds\adesivo.png
-
-#begin ./Backgrounds\Calendario (1999).png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:./Backgrounds\Calendario (1999).png
-
-#begin ./Backgrounds\Calendario (2025).png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:./Backgrounds\Calendario (2025).png
-
-#begin ./Backgrounds\chaveQuadra.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:./Backgrounds\chaveQuadra.png
-
-#begin ./Backgrounds\corredor_hall.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:./Backgrounds\corredor_hall.png
-
-#begin ./Backgrounds\gelao.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:./Backgrounds\gelao.png
-
-#begin ./Backgrounds\quadradinho.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:./Backgrounds\quadradinho.png
-
-#begin ./Backgrounds\teto.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:./Backgrounds\teto.png
-
-#begin ./Backgrounds\vinheta.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:./Backgrounds\vinheta.png
-
 #begin ./Backgrounds\313\background.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -183,6 +73,18 @@
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\313\visaoGeral.png
 
+#begin ./Backgrounds\adesivo.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:./Backgrounds\adesivo.png
+
 #begin ./Backgrounds\BanhoDeSol\background.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -218,6 +120,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\BanhoDeSol\visaoGeral.png
+
+#begin ./Backgrounds\Calendario (1999).png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:./Backgrounds\Calendario (1999).png
+
+#begin ./Backgrounds\Calendario (2025).png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:./Backgrounds\Calendario (2025).png
 
 #begin ./Backgrounds\Cantina\armario(aberto).png
 /importer:TextureImporter
@@ -279,18 +205,6 @@
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\Cantina\CantinaVisaoGeral(panela-fogo).png
 
-#begin ./Backgrounds\Cantina\fogo.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:./Backgrounds\Cantina\fogo.png
-
 #begin ./Backgrounds\Cantina\fogão.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -302,6 +216,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\Cantina\fogão.png
+
+#begin ./Backgrounds\Cantina\fogo.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:./Backgrounds\Cantina\fogo.png
 
 #begin ./Backgrounds\Cantina\gelo.png
 /importer:TextureImporter
@@ -399,6 +325,18 @@
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\cenariosQuadra\portao.png
 
+#begin ./Backgrounds\cenariosQuadra\quadra.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:./Backgrounds\cenariosQuadra\quadra.png
+
 #begin ./Backgrounds\cenariosQuadra\quadra(pessoa-com-ferro).png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -423,18 +361,6 @@
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\cenariosQuadra\quadra(visaoGeral).png
 
-#begin ./Backgrounds\cenariosQuadra\quadra.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:./Backgrounds\cenariosQuadra\quadra.png
-
 #begin ./Backgrounds\cenariosQuadra\qudra(pessoa-sem-ferro).png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -458,6 +384,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\cenariosQuadra\visaoGeral.png
+
+#begin ./Backgrounds\chaveQuadra.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:./Backgrounds\chaveQuadra.png
+
+#begin ./Backgrounds\corredor_hall.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:./Backgrounds\corredor_hall.png
 
 #begin ./Backgrounds\Elevador-sala\backgound.png
 /importer:TextureImporter
@@ -495,6 +445,18 @@
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\Elevador-sala\Calendario (2025).png
 
+#begin ./Backgrounds\Elevador-sala\elevador.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:./Backgrounds\Elevador-sala\elevador.png
+
 #begin ./Backgrounds\Elevador-sala\elevador(aberto).png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -507,7 +469,7 @@
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\Elevador-sala\elevador(aberto).png
 
-#begin ./Backgrounds\Elevador-sala\elevador.png
+#begin ./Backgrounds\Elevador-sala\porta_aberta.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -517,7 +479,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:./Backgrounds\Elevador-sala\elevador.png
+/build:./Backgrounds\Elevador-sala\porta_aberta.png
 
 #begin ./Backgrounds\Elevador-sala\porta.png
 /importer:TextureImporter
@@ -531,7 +493,7 @@
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\Elevador-sala\porta.png
 
-#begin ./Backgrounds\Elevador-sala\porta_aberta.png
+#begin ./Backgrounds\Escada-elevador\background.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -541,7 +503,43 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:./Backgrounds\Elevador-sala\porta_aberta.png
+/build:./Backgrounds\Escada-elevador\background.png
+
+#begin ./Backgrounds\Escada-elevador\elevador.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:./Backgrounds\Escada-elevador\elevador.png
+
+#begin ./Backgrounds\Escada-elevador\elevador(aberto).png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:./Backgrounds\Escada-elevador\elevador(aberto).png
+
+#begin ./Backgrounds\Escada-elevador\VisaoGeral.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:./Backgrounds\Escada-elevador\VisaoGeral.png
 
 #begin ./Backgrounds\Escada\ampulheta.png
 /importer:TextureImporter
@@ -591,7 +589,7 @@
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\Escada\visaoGeral.png
 
-#begin ./Backgrounds\Escada-elevador\background.png
+#begin ./Backgrounds\gelao.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -601,43 +599,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:./Backgrounds\Escada-elevador\background.png
-
-#begin ./Backgrounds\Escada-elevador\elevador(aberto).png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:./Backgrounds\Escada-elevador\elevador(aberto).png
-
-#begin ./Backgrounds\Escada-elevador\elevador.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:./Backgrounds\Escada-elevador\elevador.png
-
-#begin ./Backgrounds\Escada-elevador\VisaoGeral.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:./Backgrounds\Escada-elevador\VisaoGeral.png
+/build:./Backgrounds\gelao.png
 
 #begin ./Backgrounds\Lab-amarelo-TI\background.png
 /importer:TextureImporter
@@ -651,18 +613,6 @@
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\Lab-amarelo-TI\background.png
 
-#begin ./Backgrounds\Lab-amarelo-TI\porta.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:./Backgrounds\Lab-amarelo-TI\porta.png
-
 #begin ./Backgrounds\Lab-amarelo-TI\porta_aberta.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -675,6 +625,18 @@
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\Lab-amarelo-TI\porta_aberta.png
 
+#begin ./Backgrounds\Lab-amarelo-TI\porta.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:./Backgrounds\Lab-amarelo-TI\porta.png
+
 #begin ./Backgrounds\Lab-amarelo-TI\visaoGeral.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -686,6 +648,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\Lab-amarelo-TI\visaoGeral.png
+
+#begin ./Backgrounds\LabAmarelo\arcondicionado.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:./Backgrounds\LabAmarelo\arcondicionado.png
 
 #begin ./Backgrounds\LabAmarelo\arcondicionado(desligado).png
 /importer:TextureImporter
@@ -711,7 +685,7 @@
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\LabAmarelo\arcondicionado(ligado).png
 
-#begin ./Backgrounds\LabAmarelo\arcondicionado.png
+#begin ./Backgrounds\LabAmarelo\armario.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -721,7 +695,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:./Backgrounds\LabAmarelo\arcondicionado.png
+/build:./Backgrounds\LabAmarelo\armario.png
 
 #begin ./Backgrounds\LabAmarelo\armario(congelado).png
 /importer:TextureImporter
@@ -734,18 +708,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\LabAmarelo\armario(congelado).png
-
-#begin ./Backgrounds\LabAmarelo\armario.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:./Backgrounds\LabAmarelo\armario.png
 
 #begin ./Backgrounds\LabAmarelo\armarioAberto.png
 /importer:TextureImporter
@@ -783,18 +745,6 @@
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\LabAmarelo\dedo.png
 
-#begin ./Backgrounds\LabAmarelo\gelao(com-pessoa).png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:./Backgrounds\LabAmarelo\gelao(com-pessoa).png
-
 #begin ./Backgrounds\LabAmarelo\gelao.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -806,6 +756,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\LabAmarelo\gelao.png
+
+#begin ./Backgrounds\LabAmarelo\gelao(com-pessoa).png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:./Backgrounds\LabAmarelo\gelao(com-pessoa).png
 
 #begin ./Backgrounds\LabAmarelo\gelinho(dedo).png
 /importer:TextureImporter
@@ -891,18 +853,6 @@
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\Labs-vermelho-verde\backgound.png
 
-#begin ./Backgrounds\Labs-vermelho-verde\escaninho.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:./Backgrounds\Labs-vermelho-verde\escaninho.png
-
 #begin ./Backgrounds\Labs-vermelho-verde\escaninho_aberto.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -927,6 +877,18 @@
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\Labs-vermelho-verde\escaninho_com_pe_de_cabra.png
 
+#begin ./Backgrounds\Labs-vermelho-verde\escaninho.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:./Backgrounds\Labs-vermelho-verde\escaninho.png
+
 #begin ./Backgrounds\Labs-vermelho-verde\pe_de_cabra.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -938,18 +900,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\Labs-vermelho-verde\pe_de_cabra.png
-
-#begin ./Backgrounds\Labs-vermelho-verde\porta_lab_verde.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:./Backgrounds\Labs-vermelho-verde\porta_lab_verde.png
 
 #begin ./Backgrounds\Labs-vermelho-verde\porta_lab_verde_aberta.png
 /importer:TextureImporter
@@ -963,7 +913,7 @@
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\Labs-vermelho-verde\porta_lab_verde_aberta.png
 
-#begin ./Backgrounds\Labs-vermelho-verde\porta_lab_vermelho.png
+#begin ./Backgrounds\Labs-vermelho-verde\porta_lab_verde.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -973,7 +923,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:./Backgrounds\Labs-vermelho-verde\porta_lab_vermelho.png
+/build:./Backgrounds\Labs-vermelho-verde\porta_lab_verde.png
 
 #begin ./Backgrounds\Labs-vermelho-verde\porta_lab_vermelho_aberta.png
 /importer:TextureImporter
@@ -986,6 +936,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\Labs-vermelho-verde\porta_lab_vermelho_aberta.png
+
+#begin ./Backgrounds\Labs-vermelho-verde\porta_lab_vermelho.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:./Backgrounds\Labs-vermelho-verde\porta_lab_vermelho.png
 
 #begin ./Backgrounds\Labs-vermelho-verde\visaoGeral.png
 /importer:TextureImporter
@@ -1431,6 +1393,18 @@
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\QuadraDestrancada\cadeado.png
 
+#begin ./Backgrounds\quadradinho.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:./Backgrounds\quadradinho.png
+
 #begin ./Backgrounds\QuadraTrancada\background.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1491,54 +1465,6 @@
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\SalaMetal\mesa.png
 
-#begin ./Backgrounds\SalaOswaldo\background.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:./Backgrounds\SalaOswaldo\background.png
-
-#begin ./Backgrounds\SalaOswaldo\coisaEletrica.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:./Backgrounds\SalaOswaldo\coisaEletrica.png
-
-#begin ./Backgrounds\SalaOswaldo\digital.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:./Backgrounds\SalaOswaldo\digital.png
-
-#begin ./Backgrounds\SalaOswaldo\portaOswaldo.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:./Backgrounds\SalaOswaldo\portaOswaldo.png
-
 #begin ./Backgrounds\SalaOswaldo(parteInterna)\background.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1587,7 +1513,7 @@
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\SalaOswaldo(parteInterna)\chaveOnibus.png
 
-#begin ./Backgrounds\Util\digital.png
+#begin ./Backgrounds\SalaOswaldo\background.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -1597,7 +1523,55 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:./Backgrounds\Util\digital.png
+/build:./Backgrounds\SalaOswaldo\background.png
+
+#begin ./Backgrounds\SalaOswaldo\coisaEletrica.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:./Backgrounds\SalaOswaldo\coisaEletrica.png
+
+#begin ./Backgrounds\SalaOswaldo\digital.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:./Backgrounds\SalaOswaldo\digital.png
+
+#begin ./Backgrounds\SalaOswaldo\portaOswaldo.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:./Backgrounds\SalaOswaldo\portaOswaldo.png
+
+#begin ./Backgrounds\teto.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:./Backgrounds\teto.png
 
 #begin ./Backgrounds\Util\digital_desbloqueada.png
 /importer:TextureImporter
@@ -1622,6 +1596,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\Util\digital_trancada.png
+
+#begin ./Backgrounds\Util\digital.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:./Backgrounds\Util\digital.png
 
 #begin ./Backgrounds\Util\flitro-antigo.png
 /importer:TextureImporter
@@ -1755,6 +1741,18 @@
 /processorParam:TextureFormat=Color
 /build:./Backgrounds\Util\Numeros\9.png
 
+#begin ./Backgrounds\vinheta.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:./Backgrounds\vinheta.png
+
 #begin ./Sprites\Backgrounds\entrada_coltec.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1791,4 +1789,27 @@
 /processorParam:TextureFormat=Color
 /build:./UI\Button.png
 
+#begin Backgrounds/Lab-amarelo-TI/portaTI.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Backgrounds/Lab-amarelo-TI/portaTI.png
+
+#begin Backgrounds/Lab-amarelo-TI/portaTI(aberta).png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Backgrounds/Lab-amarelo-TI/portaTI(aberta).png
 

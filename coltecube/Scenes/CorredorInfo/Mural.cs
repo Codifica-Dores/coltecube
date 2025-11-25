@@ -5,7 +5,7 @@ using coltecube.Objects;
 using coltecube.Systems; 
 using System;
 
-namespace coltecube.Scenes.Hall;
+namespace coltecube.Scenes.CorredorInfo;
 
 public class Mural : View
 {

@@ -51,7 +51,7 @@ public class ElevadorSala : View
             _backgroundScale);
         elevadorAberto.OnClick += () =>
         {
-            Core.ChangeScene(new CorredorInfoScene());
+            Core.ChangeScene(new CorredorInfoScene(FaceView.Elevador));
         };
         _objects.Add(elevadorAberto);
         elevadorAberto.name = "elevador_aberto";

@@ -11,6 +11,14 @@ namespace coltecube.Scenes
 {
     public class HallScene : GeralScene
     {
+        // Variável para guardar onde começar
+        private FaceView _vistaInicial;
+
+        // Construtor 
+        public HallScene(FaceView vistaInicial = FaceView.Escada)
+        {
+            _vistaInicial = vistaInicial;
+        }
 
         public override void LoadContent()
         {
@@ -41,7 +49,19 @@ namespace coltecube.Scenes
             _views[FaceView.Teto].LoadContent(this.Content);
             
             // Define a Vista Inicial
-            _currentViewKey = 0; // sempre 0
+            int indiceCalculado = (int)_vistaInicial - indiceFaceView;
+        
+            if (indiceCalculado >= 0 && indiceCalculado < totalWalls)
+            {
+                _currentViewKey = (FaceView)indiceCalculado;
+            }
+            else
+            {
+                _currentViewKey = 0; // sempre 0
+            }
+
+            _nextViewKey = _currentViewKey;
+
             _activeView = _views[_currentViewKey+indiceFaceView];
             
             DefineArrows();
