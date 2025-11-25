@@ -11,7 +11,7 @@ public class GameObject
 	public Texture2D Texture { get; set; }
 	public Color[] PixelData { get; private set; } 
 	
-	private Vector2 _position;
+	public Vector2 _position;
 	private float _scale;
 	
 	public Vector2 Position 

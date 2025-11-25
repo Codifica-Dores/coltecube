@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/313/visaoGeral.png</SourceFile>
-  <SourceTime>2025-11-25T01:21:08.4593231-03:00</SourceTime>
-  <DestFile>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/bin/DesktopGL/Content/Backgrounds/313/visaoGeral.xnb</DestFile>
-  <DestTime>2025-11-25T09:55:39.6751914-03:00</DestTime>
+  <SourceFile>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/313/visaoGeral.png</SourceFile>
+  <SourceTime>2025-11-25T09:35:15.3559047-03:00</SourceTime>
+  <DestFile>/home/a2023951482/Documentos/coltecube/coltecube/Content/bin/DesktopGL/Content/Backgrounds/313/visaoGeral.xnb</DestFile>
+  <DestTime>2025-11-25T10:52:31.8459027-03:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2025-10-20T11:25:32-03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -40,10 +40,10 @@ public class Game1 : Core
 
         Core.ChangeScene(new MainMenuScene()); // mudar aqui > MainMenuScene()
 		
-		inventory = new Inventory(Content.Load<Texture2D>("Backgrounds/quadradinho"),
+		Game1.inventory = new Inventory(Content.Load<Texture2D>("Backgrounds/quadradinho"),
 		new Vector2((Game1.NATIVE_WIDTH+Game1.ESPACO_LATERAL_ITEMS)/2,Game1.NATIVE_HEIGHT/2),
 		0.05f);
-		inventory.Charge();
+		Game1.inventory.Charge();
     }
 
     protected override void Update(GameTime gameTime)

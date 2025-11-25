@@ -1,0 +1,13 @@
+/home/a2023951482/Documentos/coltecube/MonoGameLibrary/bin/Debug/net8.0/MonoGameLibrary.deps.json
+/home/a2023951482/Documentos/coltecube/MonoGameLibrary/bin/Debug/net8.0/MonoGameLibrary.dll
+/home/a2023951482/Documentos/coltecube/MonoGameLibrary/bin/Debug/net8.0/MonoGameLibrary.pdb
+/home/a2023951482/Documentos/coltecube/MonoGameLibrary/obj/Debug/net8.0/MonoGameLibrary.csproj.AssemblyReference.cache
+/home/a2023951482/Documentos/coltecube/MonoGameLibrary/obj/Debug/net8.0/MonoGameLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/home/a2023951482/Documentos/coltecube/MonoGameLibrary/obj/Debug/net8.0/MonoGameLibrary.AssemblyInfoInputs.cache
+/home/a2023951482/Documentos/coltecube/MonoGameLibrary/obj/Debug/net8.0/MonoGameLibrary.AssemblyInfo.cs
+/home/a2023951482/Documentos/coltecube/MonoGameLibrary/obj/Debug/net8.0/MonoGameLibrary.csproj.CoreCompileInputs.cache
+/home/a2023951482/Documentos/coltecube/MonoGameLibrary/obj/Debug/net8.0/MonoGameLibrary.sourcelink.json
+/home/a2023951482/Documentos/coltecube/MonoGameLibrary/obj/Debug/net8.0/MonoGameLibrary.dll
+/home/a2023951482/Documentos/coltecube/MonoGameLibrary/obj/Debug/net8.0/refint/MonoGameLibrary.dll
+/home/a2023951482/Documentos/coltecube/MonoGameLibrary/obj/Debug/net8.0/MonoGameLibrary.pdb
+/home/a2023951482/Documentos/coltecube/MonoGameLibrary/obj/Debug/net8.0/ref/MonoGameLibrary.dll

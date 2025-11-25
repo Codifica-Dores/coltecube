@@ -103,8 +103,8 @@ public class Inventory : MultipleObject
 				if (i*qtLines+j >= objects.Count) return;
 
 				Vector2 pos = new Vector2(
-						Position.X + i * (Texture.Width * Scale)+difX,
-						Position.Y + j * (Texture.Height * Scale + padding)+difY
+						Position.X - i * (objects[i*qtLines+j].Texture.Width)/2+difX,
+						Position.Y - j * (objects[i*qtLines+j].Texture.Height/2 + padding)+difY
 					);
 				objects[i*qtLines+j].Position = pos;
 				objects[i*qtLines+j].Draw(spriteBatch);

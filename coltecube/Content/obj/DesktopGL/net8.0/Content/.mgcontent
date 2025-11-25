@@ -4,156 +4,156 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/313/background.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/313/bakgound.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/313/comunismo.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/313/papeis.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/313/visaoGeral.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/adesivo.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/BanhoDeSol/background.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/BanhoDeSol/sol_na_banheira.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/BanhoDeSol/visaoGeral.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Calendario (1999).png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Calendario (2025).png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Cantina/armario(aberto).png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Cantina/armario(fechado).png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Cantina/background.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Cantina/CantinaVisaoGeral(armario-aberto).png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Cantina/CantinaVisaoGeral(panela-fogo).png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Cantina/fogão.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Cantina/fogo.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Cantina/gelo.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Cantina/panela.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Cantina/poça-de-dagua-do-gelo-na-panela.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/cenariosQuadra/background.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/cenariosQuadra/ferro.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/cenariosQuadra/onibus.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/cenariosQuadra/parede.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/cenariosQuadra/portao.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/cenariosQuadra/quadra.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/cenariosQuadra/quadra(pessoa-com-ferro).png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/cenariosQuadra/quadra(visaoGeral).png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/cenariosQuadra/qudra(pessoa-sem-ferro).png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/cenariosQuadra/visaoGeral.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/chaveQuadra.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/corredor_hall.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Elevador-sala/backgound.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Elevador-sala/Calendario (1999).png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Elevador-sala/Calendario (2025).png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Elevador-sala/elevador.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Elevador-sala/elevador(aberto).png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Elevador-sala/porta_aberta.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Elevador-sala/porta.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Escada-elevador/background.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Escada-elevador/elevador.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Escada-elevador/elevador(aberto).png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Escada-elevador/VisaoGeral.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Escada/ampulheta.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Escada/background.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Escada/escada.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Escada/visaoGeral.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/gelao.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Lab-amarelo-TI/background.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Lab-amarelo-TI/porta_aberta.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Lab-amarelo-TI/porta.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Lab-amarelo-TI/visaoGeral.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/arcondicionado.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/arcondicionado(desligado).png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/arcondicionado(ligado).png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/armario.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/armario(congelado).png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/armarioAberto.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/background.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/dedo.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/gelao.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/gelao(com-pessoa).png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/gelinho(dedo).png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/mesas.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/quadro_branco.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/suporte_controle_arcondicionado.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/tv.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/visaoGeral.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Labs-vermelho-verde/backgound.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Labs-vermelho-verde/escaninho_aberto.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Labs-vermelho-verde/escaninho_com_pe_de_cabra.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Labs-vermelho-verde/escaninho.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Labs-vermelho-verde/pe_de_cabra.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Labs-vermelho-verde/porta_lab_verde_aberta.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Labs-vermelho-verde/porta_lab_verde.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Labs-vermelho-verde/porta_lab_vermelho_aberta.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Labs-vermelho-verde/porta_lab_vermelho.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Labs-vermelho-verde/visaoGeral.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/LabVerde/background.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/LabVerde/computator.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/LabVerde/controle.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/LabVerde/visaoGeral.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/LabVermelho/adesivo.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/LabVermelho/background.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/LabVermelho/computador.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/LabVermelho/impressora.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/LabVermelho/visaoGeral.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Madeira/background.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Metal/background.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Metal/portaMetal.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Mural/background.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Mural/mural.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Onibus/background.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Onibus/chaveEncaixada.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Onibus/engrenagem.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Onibus/espelho-com-reflexo.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Onibus/espelho.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Onibus/motor.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Onibus/negocioDaChave.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Onibus/visaoGeral.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Puzzles/coisa-eletrica/alavanca(acionada).png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Puzzles/coisa-eletrica/alavanca(nao acionada).png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Puzzles/coisa-eletrica/background.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Puzzles/coisa-eletrica/barra-slider.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Puzzles/coisa-eletrica/bolinha-slider.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Puzzles/coisa-eletrica/caixa-de-numero.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Puzzles/coisa-eletrica/Visao Geral.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Puzzles/pc-lab-vermelho/circuito-tela.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Puzzles/protoboard/background.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Puzzles/protoboard/fio.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Puzzles/protoboard/VisaoGeral(assim vai começar o puzzle.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Puzzles/protoboard/VisaoGeral(assim vai deligar a energia).png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/QuadraDestrancada/background.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/QuadraDestrancada/cadeado.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/quadradinho.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/QuadraTrancada/background.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/QuadraTrancada/cadeado.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/SalaMetal/26 Sem Título_20251117204524.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/SalaMetal/background.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/SalaMetal/mesa.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/SalaOswaldo(parteInterna)/background.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/SalaOswaldo(parteInterna)/chaveEncaixada.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/SalaOswaldo(parteInterna)/chaveNaMesa.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/SalaOswaldo(parteInterna)/chaveOnibus.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/SalaOswaldo/background.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/SalaOswaldo/coisaEletrica.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/SalaOswaldo/digital.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/SalaOswaldo/portaOswaldo.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/teto.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Util/digital_desbloqueada.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Util/digital_trancada.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Util/digital.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Util/flitro-antigo.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Util/Numeros/0.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Util/Numeros/1.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Util/Numeros/2.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Util/Numeros/3.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Util/Numeros/4.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Util/Numeros/5.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Util/Numeros/6.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Util/Numeros/7.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Util/Numeros/8.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/Util/Numeros/9.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Backgrounds/vinheta.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./Sprites/Backgrounds/entrada_coltec.jpg</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./UI/ArrowDown.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/./UI/Button.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/Backgrounds/Lab-amarelo-TI/portaTI.png</File>
-    <File>/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/Backgrounds/Lab-amarelo-TI/portaTI(aberta).png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/313/background.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/313/bakgound.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/313/comunismo.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/313/papeis.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/313/visaoGeral.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/adesivo.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/BanhoDeSol/background.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/BanhoDeSol/sol_na_banheira.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/BanhoDeSol/visaoGeral.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Calendario (1999).png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Calendario (2025).png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Cantina/armario(aberto).png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Cantina/armario(fechado).png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Cantina/background.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Cantina/CantinaVisaoGeral(armario-aberto).png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Cantina/CantinaVisaoGeral(panela-fogo).png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Cantina/fogão.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Cantina/fogo.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Cantina/gelo.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Cantina/panela.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Cantina/poça-de-dagua-do-gelo-na-panela.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/cenariosQuadra/background.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/cenariosQuadra/ferro.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/cenariosQuadra/onibus.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/cenariosQuadra/parede.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/cenariosQuadra/portao.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/cenariosQuadra/quadra.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/cenariosQuadra/quadra(pessoa-com-ferro).png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/cenariosQuadra/quadra(visaoGeral).png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/cenariosQuadra/qudra(pessoa-sem-ferro).png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/cenariosQuadra/visaoGeral.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/chaveQuadra.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/corredor_hall.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Elevador-sala/backgound.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Elevador-sala/Calendario (1999).png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Elevador-sala/Calendario (2025).png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Elevador-sala/elevador.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Elevador-sala/elevador(aberto).png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Elevador-sala/porta_aberta.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Elevador-sala/porta.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Escada-elevador/background.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Escada-elevador/elevador.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Escada-elevador/elevador(aberto).png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Escada-elevador/VisaoGeral.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Escada/ampulheta.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Escada/background.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Escada/escada.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Escada/visaoGeral.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/gelao.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Lab-amarelo-TI/background.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Lab-amarelo-TI/porta_aberta.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Lab-amarelo-TI/porta.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Lab-amarelo-TI/visaoGeral.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/arcondicionado.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/arcondicionado(desligado).png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/arcondicionado(ligado).png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/armario.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/armario(congelado).png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/armarioAberto.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/background.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/dedo.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/gelao.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/gelao(com-pessoa).png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/gelinho(dedo).png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/mesas.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/quadro_branco.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/suporte_controle_arcondicionado.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/tv.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/LabAmarelo/visaoGeral.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Labs-vermelho-verde/backgound.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Labs-vermelho-verde/escaninho_aberto.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Labs-vermelho-verde/escaninho_com_pe_de_cabra.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Labs-vermelho-verde/escaninho.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Labs-vermelho-verde/pe_de_cabra.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Labs-vermelho-verde/porta_lab_verde_aberta.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Labs-vermelho-verde/porta_lab_verde.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Labs-vermelho-verde/porta_lab_vermelho_aberta.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Labs-vermelho-verde/porta_lab_vermelho.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Labs-vermelho-verde/visaoGeral.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/LabVerde/background.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/LabVerde/computator.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/LabVerde/controle.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/LabVerde/visaoGeral.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/LabVermelho/adesivo.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/LabVermelho/background.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/LabVermelho/computador.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/LabVermelho/impressora.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/LabVermelho/visaoGeral.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Madeira/background.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Metal/background.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Metal/portaMetal.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Mural/background.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Mural/mural.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Onibus/background.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Onibus/chaveEncaixada.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Onibus/engrenagem.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Onibus/espelho-com-reflexo.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Onibus/espelho.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Onibus/motor.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Onibus/negocioDaChave.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Onibus/visaoGeral.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Puzzles/coisa-eletrica/alavanca(acionada).png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Puzzles/coisa-eletrica/alavanca(nao acionada).png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Puzzles/coisa-eletrica/background.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Puzzles/coisa-eletrica/barra-slider.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Puzzles/coisa-eletrica/bolinha-slider.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Puzzles/coisa-eletrica/caixa-de-numero.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Puzzles/coisa-eletrica/Visao Geral.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Puzzles/pc-lab-vermelho/circuito-tela.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Puzzles/protoboard/background.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Puzzles/protoboard/fio.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Puzzles/protoboard/VisaoGeral(assim vai começar o puzzle.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Puzzles/protoboard/VisaoGeral(assim vai deligar a energia).png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/QuadraDestrancada/background.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/QuadraDestrancada/cadeado.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/quadradinho.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/QuadraTrancada/background.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/QuadraTrancada/cadeado.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/SalaMetal/26 Sem Título_20251117204524.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/SalaMetal/background.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/SalaMetal/mesa.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/SalaOswaldo(parteInterna)/background.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/SalaOswaldo(parteInterna)/chaveEncaixada.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/SalaOswaldo(parteInterna)/chaveNaMesa.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/SalaOswaldo(parteInterna)/chaveOnibus.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/SalaOswaldo/background.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/SalaOswaldo/coisaEletrica.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/SalaOswaldo/digital.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/SalaOswaldo/portaOswaldo.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/teto.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Util/digital_desbloqueada.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Util/digital_trancada.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Util/digital.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Util/flitro-antigo.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Util/Numeros/0.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Util/Numeros/1.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Util/Numeros/2.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Util/Numeros/3.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Util/Numeros/4.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Util/Numeros/5.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Util/Numeros/6.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Util/Numeros/7.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Util/Numeros/8.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/Util/Numeros/9.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Backgrounds/vinheta.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./Sprites/Backgrounds/entrada_coltec.jpg</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./UI/ArrowDown.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/./UI/Button.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/Backgrounds/Lab-amarelo-TI/portaTI.png</File>
+    <File>/home/a2023951482/Documentos/coltecube/coltecube/Content/Backgrounds/Lab-amarelo-TI/portaTI(aberta).png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

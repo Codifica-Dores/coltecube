@@ -22,7 +22,13 @@ public abstract class View
 
     public virtual void Update(GameTime gameTime, MouseInfo mouse)
     {
-        foreach (var obj in _objects) obj.Update(gameTime, mouse);
+        if (_objects.Count == 0) return;
+        for (int i = 0; i < _objects.Count; i++)
+        {
+            // Capturar uma referência estável
+            var obj = _objects[i];
+            obj.Update(gameTime, mouse);
+        }
     }
 
 	public static Vector2 center;
