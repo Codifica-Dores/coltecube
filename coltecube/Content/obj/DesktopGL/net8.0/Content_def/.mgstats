@@ -1,4 +1,0 @@
-Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/Fonts/File.spritefont","/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/bin/DesktopGL/Content_def/Fonts/File.xnb","FontDescriptionProcessor","SpriteFontContent",2008,21529,0.3642374
-"/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/UI/ArrowDown.png","/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/bin/DesktopGL/Content_def/UI/ArrowDown.xnb","TextureProcessor","Texture2DContent",48168,16078873,0.9118854
-"/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/UI/Button.png","/home/julia/Área de trabalho/codificadores/coltecube/coltecube/Content/bin/DesktopGL/Content_def/UI/Button.xnb","TextureProcessor","Texture2DContent",6042,1048661,0.0937772
