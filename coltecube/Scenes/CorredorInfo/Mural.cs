@@ -9,23 +9,17 @@ namespace coltecube.Scenes.Hall;
 
 public class Mural : View
 {
-    // private InteractiveObject cadeado;
+    private InteractiveObject mural;
 
     public override void LoadContent(ContentManager content)
     {
+        // Background
         _background = content.Load<Texture2D>("Backgrounds/Mural/background");
-		// _
            
-        /*var cadeadoTexture = content.Load<Texture2D>("Objects/Cadeado");
-        cadeado = new InteractiveObject(cadeadoTexture, new Vector2(50, 350), 1.2f);
-
-        cadeado.OnClick += () => {
-            if (Inventory.HasItem("ChaveQuadra"))
-                Console.WriteLine("Entrando na quadra...");
-            else
-                Console.WriteLine("Está trancado!");
-        };
-
-        _objects.Add(cadeado); // Adiciona na lista de objetos da vista*/
+        // Mural
+        mural = new InteractiveObject(content.Load<Texture2D>("Backgrounds/Mural/mural"), 
+            new Vector2(0, 0), 
+            _backgroundScale);
+        _objects.Add(mural); 
     }
 }

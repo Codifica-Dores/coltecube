@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace coltecube;
+namespace coltecube.Systems;
 
 public static class GameManager
 {

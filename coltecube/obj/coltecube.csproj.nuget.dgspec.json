@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\samug\\OneDrive\\Documentos\\Scripts\\ScriptsCs\\coltecube\\coltecube\\coltecube.csproj": {}
+    "C:\\Users\\Giovana\\OneDrive\\Documentos\\coltecube\\coltecube\\coltecube.csproj": {}
   },
   "projects": {
-    "C:\\Users\\samug\\OneDrive\\Documentos\\Scripts\\ScriptsCs\\coltecube\\coltecube\\coltecube.csproj": {
+    "C:\\Users\\Giovana\\OneDrive\\Documentos\\coltecube\\coltecube\\coltecube.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samug\\OneDrive\\Documentos\\Scripts\\ScriptsCs\\coltecube\\coltecube\\coltecube.csproj",
+        "projectUniqueName": "C:\\Users\\Giovana\\OneDrive\\Documentos\\coltecube\\coltecube\\coltecube.csproj",
         "projectName": "coltecube",
-        "projectPath": "C:\\Users\\samug\\OneDrive\\Documentos\\Scripts\\ScriptsCs\\coltecube\\coltecube\\coltecube.csproj",
-        "packagesPath": "C:\\Users\\samug\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samug\\OneDrive\\Documentos\\Scripts\\ScriptsCs\\coltecube\\coltecube\\obj\\",
+        "projectPath": "C:\\Users\\Giovana\\OneDrive\\Documentos\\coltecube\\coltecube\\coltecube.csproj",
+        "packagesPath": "C:\\Users\\Giovana\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Giovana\\OneDrive\\Documentos\\coltecube\\coltecube\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\NuGet.Config",
-          "C:\\Users\\samug\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Giovana\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,14 +25,16 @@
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\samug\\OneDrive\\Documentos\\Scripts\\ScriptsCs\\coltecube\\MonoGameLibrary\\MonoGameLibrary.csproj": {
-                "projectPath": "C:\\Users\\samug\\OneDrive\\Documentos\\Scripts\\ScriptsCs\\coltecube\\MonoGameLibrary\\MonoGameLibrary.csproj"
+              "C:\\Users\\Giovana\\OneDrive\\Documentos\\coltecube\\MonoGameLibrary\\MonoGameLibrary.csproj": {
+                "projectPath": "C:\\Users\\Giovana\\OneDrive\\Documentos\\coltecube\\MonoGameLibrary\\MonoGameLibrary.csproj"
               }
             }
           }
@@ -47,7 +48,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -82,25 +84,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\samug\\OneDrive\\Documentos\\Scripts\\ScriptsCs\\coltecube\\MonoGameLibrary\\MonoGameLibrary.csproj": {
+    "C:\\Users\\Giovana\\OneDrive\\Documentos\\coltecube\\MonoGameLibrary\\MonoGameLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samug\\OneDrive\\Documentos\\Scripts\\ScriptsCs\\coltecube\\MonoGameLibrary\\MonoGameLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\Giovana\\OneDrive\\Documentos\\coltecube\\MonoGameLibrary\\MonoGameLibrary.csproj",
         "projectName": "MonoGameLibrary",
-        "projectPath": "C:\\Users\\samug\\OneDrive\\Documentos\\Scripts\\ScriptsCs\\coltecube\\MonoGameLibrary\\MonoGameLibrary.csproj",
-        "packagesPath": "C:\\Users\\samug\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samug\\OneDrive\\Documentos\\Scripts\\ScriptsCs\\coltecube\\MonoGameLibrary\\obj\\",
+        "projectPath": "C:\\Users\\Giovana\\OneDrive\\Documentos\\coltecube\\MonoGameLibrary\\MonoGameLibrary.csproj",
+        "packagesPath": "C:\\Users\\Giovana\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Giovana\\OneDrive\\Documentos\\coltecube\\MonoGameLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\NuGet.Config",
-          "C:\\Users\\samug\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Giovana\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -108,6 +109,8 @@
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -125,7 +128,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -153,7 +157,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

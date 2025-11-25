@@ -10,9 +10,22 @@ using coltecube.Scenes.Hall;
 namespace coltecube.Scenes
 {
     // Enum para as vistas
-	public enum FaceView { Escada, Quadra, Cantina, Escaninhos, BanhoDeSol, Teto, // hall 0 > 6 (6)
-	Mural, LabAmarelo, Elevador, LabVerde} // corredor info 6 > 5 (11)
-	
+    public enum FaceView
+    {
+        Escada,
+        Quadra,
+        Cantina,
+        Escaninhos,
+        BanhoDeSol,
+        Teto, // hall 0 > 6 (6)
+        Mural,
+        LabAmarelo,
+        Elevador,
+        LabVerde, // corredor info 6 > 5 (11)
+        ElevadorSala, // terceiro andar > 10
+        Sala313 // sala 313 > 11
+    }
+
     public class GeralScene : Scene
     {
         // Variáveis de Gerenciamento 
@@ -90,34 +103,17 @@ namespace coltecube.Scenes
             _viewTransition.Start();
 			
         }
-
-        // Logica de ver as setas
-        protected void SwapViewLogic()
+        
+        protected virtual bool TryChangeScene(bool isRight)
         {
-            _currentViewKey = _nextViewKey;
-            _activeView = _views[_currentViewKey+indiceFaceView];
-
-            if (_currentViewKey == FaceView.Teto)
-            {
-                // Se estiver no TETO: esconde setas Cima/Lado, mostra Baixo
-                _arrowUp.IsVisible = false;
-                _arrowDown.IsVisible = true;
-                _arrowLeft.IsVisible = false;
-                _arrowRight.IsVisible = false;
-            }
-            else
-            {
-                // Se estiver em uma PAREDE: mostra setas Cima/Lado, esconde Baixo
-                _arrowUp.IsVisible = true;
-                _arrowDown.IsVisible = false;
-                _arrowLeft.IsVisible = true;
-                _arrowRight.IsVisible = true;
-            }
+            return false; // Por padrão, nenhuma cena muda, apenas roda a vista
         }
         
         // Rotacao das vistas
         protected void RotateView(bool toRight)
         {
+            if (TryChangeScene(toRight)) return;
+            
             if (_currentViewKey == FaceView.Teto) return;
 			Console.WriteLine("rotating");
 

@@ -4,9 +4,9 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/Fonts/File.spritefont</File>
-    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/UI/ArrowDown.png</File>
-    <File>C:/Users/samug/OneDrive/Documentos/Scripts/ScriptsCs/coltecube/coltecube/Content/UI/Button.png</File>
+    <File>C:/Users/Giovana/OneDrive/Documentos/coltecube/coltecube/Content/Fonts/File.spritefont</File>
+    <File>C:/Users/Giovana/OneDrive/Documentos/coltecube/coltecube/Content/UI/ArrowDown.png</File>
+    <File>C:/Users/Giovana/OneDrive/Documentos/coltecube/coltecube/Content/UI/Button.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

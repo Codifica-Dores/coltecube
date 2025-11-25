@@ -9,23 +9,18 @@ namespace coltecube.Scenes.Hall;
 
 public class BanhoDeSol : View
 {
-    private InteractiveObject cadeado;
+    private InteractiveObject banheira;
 
     public override void LoadContent(ContentManager content)
     {
+        // Background
         _background = content.Load<Texture2D>("Backgrounds/BanhoDeSol/background");
-        // _backgroundScale = 0.32f;
-           
-        /*var cadeadoTexture = content.Load<Texture2D>("Objects/Cadeado");
-        cadeado = new InteractiveObject(cadeadoTexture, new Vector2(50, 350), 1.2f);
 
-        cadeado.OnClick += () => {
-            if (Inventory.HasItem("ChaveQuadra"))
-                Console.WriteLine("Entrando na quadra...");
-            else
-                Console.WriteLine("Está trancado!");
-        };
-
-        _objects.Add(cadeado); // Adiciona na lista de objetos da vista*/
+        // Banheira
+        banheira = new InteractiveObject(content.Load<Texture2D>("Backgrounds/BanhoDeSol/sol_na_banheira"),
+            new Vector2(0, 0),
+            _backgroundScale);
+        _objects.Add(banheira);
+        banheira.name = "sol_na_banheira";
     }
 }
